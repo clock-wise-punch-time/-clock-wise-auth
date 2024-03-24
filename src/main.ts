@@ -10,8 +10,8 @@ import { AppModule } from "./app.module";
 import { PrismaConnection } from "./domain/connection/prisma.connection";
 import { LoggingInterceptor } from "./infrastructure/interceptors/logging.interceptor";
 import * as fs from "fs";
-import * as express from 'express';
-import { join } from 'path';
+import * as express from "express";
+import { join } from "path";
 import { config } from "dotenv";
 config();
 
@@ -47,18 +47,31 @@ async function bootstrap() {
   const configService = app.get(ConfigService);
 
   app.use(compression());
-  app.use(helmet({
-    contentSecurityPolicy: {
-      directives: {
-        ...helmet.contentSecurityPolicy.getDefaultDirectives(),
-        'style-src': ["'self'", 'https://fonts.googleapis.com', "'unsafe-inline'"],
-        'connect-src': ["'self'", 'https://api.fpjs.io'],
-        'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://www.google.com', 'https://www.gstatic.com', 'https://fpjscdn.net'],
-        'frame-src': ["'self'", 'https://www.google.com'],
+  app.use(
+    helmet({
+      contentSecurityPolicy: {
+        directives: {
+          ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+          "style-src": [
+            "'self'",
+            "https://fonts.googleapis.com",
+            "'unsafe-inline'",
+          ],
+          "connect-src": ["'self'", "https://api.fpjs.io"],
+          "script-src": [
+            "'self'",
+            "'unsafe-inline'",
+            "'unsafe-eval'",
+            "https://www.google.com",
+            "https://www.gstatic.com",
+            "https://fpjscdn.net",
+          ],
+          "frame-src": ["'self'", "https://www.google.com"],
+        },
       },
-    },
-  }));
-  app.use(express.static(join(__dirname, '..', 'public')));
+    }),
+  );
+  app.use(express.static(join(__dirname, "..", "public")));
 
   app.get(PrismaConnection, { strict: false });
   app.enableShutdownHooks();
