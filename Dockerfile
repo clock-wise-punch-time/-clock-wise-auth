@@ -59,4 +59,4 @@ COPY --chown=node:node --from=build /app/prisma ./prisma
 COPY --chown=node:node --from=build /app/security ./security
 COPY --chown=node:node --from=build /app/entrypoint.sh entrypoint.sh
 
-ENTRYPOINT [ "npm", "run", "start:prod" ]
+CMD [ "npm", "run", "start:prod" ]
