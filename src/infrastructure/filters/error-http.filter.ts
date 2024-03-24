@@ -5,16 +5,16 @@ import {
   HttpException,
   HttpStatus,
   Logger,
-} from '@nestjs/common';
-import { AbstractHttpAdapter, HttpAdapterHost } from '@nestjs/core';
-import { CustomException } from 'src/domain/entities/error/custom-exception';
-import { CustomExceptionMapper } from 'src/domain/mappers/custom-exception.mapper';
-import { capitalize } from '../helper/capitalize.helper';
-import { Request, Response } from 'express';
+} from "@nestjs/common";
+import { AbstractHttpAdapter, HttpAdapterHost } from "@nestjs/core";
+import { CustomException } from "src/domain/entities/error/custom-exception";
+import { CustomExceptionMapper } from "src/domain/mappers/custom-exception.mapper";
+import { capitalize } from "../helper/capitalize.helper";
+import { Request, Response } from "express";
 
 @Catch(HttpException)
 export class ErrorHttpFilter implements ExceptionFilter {
-  protected logger = new Logger('ERROR');
+  protected logger = new Logger("ERROR");
   private httpAdapter: AbstractHttpAdapter;
 
   constructor(adapterHost: HttpAdapterHost) {
@@ -49,7 +49,7 @@ export class ErrorHttpFilter implements ExceptionFilter {
     const path = request.path;
     const status = exception.getStatus();
     const message = exception.message;
-    const errorMessage = capitalize(HttpStatus[status].replaceAll('_', ' '));
+    const errorMessage = capitalize(HttpStatus[status].replaceAll("_", " "));
 
     const error = new CustomExceptionMapper({
       error: {

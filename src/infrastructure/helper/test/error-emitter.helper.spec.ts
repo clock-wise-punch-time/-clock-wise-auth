@@ -1,13 +1,13 @@
-import { describe, test, expect } from 'vitest';
-import { errorEmitter } from '../error-emitter.helper';
-import { CustomException } from '../../../domain/entities/error/custom-exception';
-import { ERROR_NAME } from '../../../infrastructure/enums/error-name.enum';
+import { describe, test, expect } from "vitest";
+import { errorEmitter } from "../error-emitter.helper";
+import { CustomException } from "../../../domain/entities/error/custom-exception";
+import { ERROR_NAME } from "../../../infrastructure/enums/error-name.enum";
 
-describe('errorEmitter helper', () => {
-  const errorMessage = 'Test Error';
-  const stackTrace = 'TestError: Test Error\n    at <anonymous>:1:13';
+describe("errorEmitter helper", () => {
+  const errorMessage = "Test Error";
+  const stackTrace = "TestError: Test Error\n    at <anonymous>:1:13";
 
-  test('should throw CustomException for matching error type without search string', () => {
+  test("should throw CustomException for matching error type without search string", () => {
     class TestError extends Error {}
     const error = new TestError();
     const errorMappings = [
@@ -17,7 +17,7 @@ describe('errorEmitter helper', () => {
     expect(() => errorEmitter(error, errorMappings)).toThrow(CustomException);
   });
 
-  test('should throw CustomException for matching error type with search string', () => {
+  test("should throw CustomException for matching error type with search string", () => {
     class TestError extends Error {
       constructor(message: string) {
         super(message);
@@ -26,13 +26,13 @@ describe('errorEmitter helper', () => {
     }
     const error = new TestError(errorMessage);
     const errorMappings = [
-      [TestError, ERROR_NAME.USER_NOT_FOUND, 'TestError'],
+      [TestError, ERROR_NAME.USER_NOT_FOUND, "TestError"],
     ] as unknown as [ErrorConstructor, ERROR_NAME, string?][];
 
     expect(() => errorEmitter(error, errorMappings)).toThrow(CustomException);
   });
 
-  test('should not throw CustomException for non-matching error type', () => {
+  test("should not throw CustomException for non-matching error type", () => {
     class TestError extends Error {}
     const error = new TypeError(errorMessage);
     const errorMappings = [
@@ -44,7 +44,7 @@ describe('errorEmitter helper', () => {
     );
   });
 
-  test('should not throw CustomException for matching error type but non-matching search string', () => {
+  test("should not throw CustomException for matching error type but non-matching search string", () => {
     class TestError extends Error {
       constructor(message: string) {
         super(message);
@@ -53,7 +53,7 @@ describe('errorEmitter helper', () => {
     }
     const error = new TestError(errorMessage);
     const errorMappings = [
-      [TestError, ERROR_NAME.USER_NOT_FOUND, 'NonMatching'],
+      [TestError, ERROR_NAME.USER_NOT_FOUND, "NonMatching"],
     ] as unknown as [ErrorConstructor, ERROR_NAME, string?][];
 
     expect(() => errorEmitter(error, errorMappings)).not.toThrow(
@@ -61,7 +61,7 @@ describe('errorEmitter helper', () => {
     );
   });
 
-  test('should pass error stack when throwing CustomException', () => {
+  test("should pass error stack when throwing CustomException", () => {
     class TestError extends Error {
       constructor(message: string) {
         super(message);
@@ -81,7 +81,7 @@ describe('errorEmitter helper', () => {
     }
   });
 
-  test('should throw CustomException without error stack when not provided', () => {
+  test("should throw CustomException without error stack when not provided", () => {
     class TestError extends Error {}
     const error = new TestError(errorMessage);
     const errorMappings = [

@@ -1,24 +1,24 @@
-import { Inject, Injectable, Logger } from '@nestjs/common';
-import { RegisterDTO } from 'src/application/dtos/register.dto';
-import { CommunicationInterface } from 'src/application/providers/interface/communication.interface';
-import { FingerprintInterface } from 'src/application/providers/interface/fingerprint.interface';
-import { RecaptchaInterface } from 'src/application/providers/interface/recaptcha.interface';
-import { IpBlocklistService } from 'src/application/services/IpBlocklist.service';
-import { CodeService } from 'src/application/services/code.service';
-import { DeviceService } from 'src/application/services/device.service';
-import { GuidelineAccepetedService } from 'src/application/services/guideline-accepted.service';
-import { GuidelineService } from 'src/application/services/guideline.service';
-import { UserService } from 'src/application/services/user.service';
-import { DateInterface } from 'src/core/utils/interfaces/date.util';
-import { GenerateCodeInterface } from 'src/core/utils/interfaces/generate-code.interface';
-import { HasherInterface } from 'src/core/utils/interfaces/hasher.interface';
-import { RegistrationInterface } from 'src/core/utils/interfaces/registration.interface';
-import { Code } from 'src/domain/entities/code';
-import { Device } from 'src/domain/entities/device';
-import { CustomException } from 'src/domain/entities/error/custom-exception';
-import { User } from 'src/domain/entities/user';
-import { ERROR_NAME } from 'src/infrastructure/enums/error-name.enum';
-import { welcomeConfirmEmailTemplate } from '../../templates/welcome-confirme-email.template';
+import { Inject, Injectable, Logger } from "@nestjs/common";
+import { RegisterDTO } from "src/application/dtos/register.dto";
+import { CommunicationInterface } from "src/application/providers/interface/communication.interface";
+import { FingerprintInterface } from "src/application/providers/interface/fingerprint.interface";
+import { RecaptchaInterface } from "src/application/providers/interface/recaptcha.interface";
+import { IpBlocklistService } from "src/application/services/IpBlocklist.service";
+import { CodeService } from "src/application/services/code.service";
+import { DeviceService } from "src/application/services/device.service";
+import { GuidelineAccepetedService } from "src/application/services/guideline-accepted.service";
+import { GuidelineService } from "src/application/services/guideline.service";
+import { UserService } from "src/application/services/user.service";
+import { DateInterface } from "src/core/utils/interfaces/date.util";
+import { GenerateCodeInterface } from "src/core/utils/interfaces/generate-code.interface";
+import { HasherInterface } from "src/core/utils/interfaces/hasher.interface";
+import { RegistrationInterface } from "src/core/utils/interfaces/registration.interface";
+import { Code } from "src/domain/entities/code";
+import { Device } from "src/domain/entities/device";
+import { CustomException } from "src/domain/entities/error/custom-exception";
+import { User } from "src/domain/entities/user";
+import { ERROR_NAME } from "src/infrastructure/enums/error-name.enum";
+import { welcomeConfirmEmailTemplate } from "../../templates/welcome-confirme-email.template";
 
 @Injectable()
 export class RegisterUseCase {
@@ -32,25 +32,25 @@ export class RegisterUseCase {
     private readonly guidelines: GuidelineService,
     private readonly guidelinesAccepeted: GuidelineAccepetedService,
     private readonly code: CodeService,
-    @Inject('Date')
+    @Inject("Date")
     private readonly date: DateInterface,
-    @Inject('Hasher')
+    @Inject("Hasher")
     private readonly hasher: HasherInterface,
-    @Inject('GenerateCode')
+    @Inject("GenerateCode")
     private readonly generateCode: GenerateCodeInterface,
-    @Inject('Registration')
+    @Inject("Registration")
     private readonly registration: RegistrationInterface,
-    @Inject('SMTP')
+    @Inject("SMTP")
     private readonly communication: CommunicationInterface,
-    @Inject('Fingerprint')
+    @Inject("Fingerprint")
     private readonly fingerprint: FingerprintInterface,
     private readonly ipBlockList: IpBlocklistService,
-    @Inject('Recaptcha')
+    @Inject("Recaptcha")
     private readonly recaptcha: RecaptchaInterface,
   ) {}
 
   async execute(data: RegisterDTO) {
-    this.logger.debug('PAYLOAD', JSON.stringify(data));
+    this.logger.debug("PAYLOAD", JSON.stringify(data));
     try {
       const {
         name,
@@ -94,21 +94,21 @@ export class RegisterUseCase {
   }
 
   async checkRecaptchaToken(recaptchaToken: string) {
-    if (this.enviromnet === 'production') {
+    if (this.enviromnet === "production") {
       await this.recaptcha.verify(recaptchaToken);
     }
   }
 
   async acceptTheTerms(termsAccepted: boolean) {
     if (!termsAccepted) {
-      this.logger.log('NOT ACCEPT TERMS');
+      this.logger.log("NOT ACCEPT TERMS");
       throw new CustomException(ERROR_NAME.REFUSED_GUIDELINE);
     }
-    this.logger.log('ACCEPT TERMS');
+    this.logger.log("ACCEPT TERMS");
   }
 
   createRegistration(cpf: string, birthdate: Date) {
-    const getDate = this.date.toFormat(birthdate, 'yyyy-mm-dd');
+    const getDate = this.date.toFormat(birthdate, "yyyy-mm-dd");
     const birthDateString = String(getDate);
     return this.registration.code(cpf, birthDateString);
   }
@@ -135,7 +135,7 @@ export class RegisterUseCase {
       phone,
       birthdate: birthdate,
       password: encryptPassword,
-      role: 'USER',
+      role: "USER",
     });
     return await this.user.create(user);
   }
@@ -206,7 +206,7 @@ export class RegisterUseCase {
   }
 
   async createDevice(device: Partial<Device>, userId: string) {
-    if (this.enviromnet === 'production') {
+    if (this.enviromnet === "production") {
       const newDevice = new Device({
         user_id: userId,
         ...device,
@@ -217,7 +217,7 @@ export class RegisterUseCase {
   }
 
   async agreeWithTheTerms(userId: string, deviceId: string) {
-    if (this.enviromnet === 'production') {
+    if (this.enviromnet === "production") {
       const latestGuidelines = await this.guidelines.findAllLatestVersion();
       const acceptAllGuidelines = latestGuidelines.flatMap(({ id }) => {
         return {
@@ -236,7 +236,7 @@ export class RegisterUseCase {
 
     const confirmEmailCodeCreatorRegister = new Code({
       user_id: userId,
-      type: 'EMAIL_VERIFY',
+      type: "EMAIL_VERIFY",
       code: token,
     });
 
@@ -247,7 +247,7 @@ export class RegisterUseCase {
     await this.communication.send({
       to: email,
       from: process.env.MAIL_FROM,
-      subject: '⌚ Boas-Vindas à Clock-Wise: Confirme seu E-mail para Começar!',
+      subject: "⌚ Boas-Vindas à Clock-Wise: Confirme seu E-mail para Começar!",
       html: welcomeConfirmEmailTemplate(name, link),
     });
   }

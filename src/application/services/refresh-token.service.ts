@@ -1,9 +1,9 @@
-import { Inject } from '@nestjs/common';
-import { CacheInterface } from 'src/domain/repositories/interfaces/cache.interface';
+import { Inject } from "@nestjs/common";
+import { CacheInterface } from "src/domain/repositories/interfaces/cache.interface";
 
 export class RefreshTokenService {
   constructor(
-    @Inject('Cache')
+    @Inject("Cache")
     private cache: CacheInterface,
   ) {}
 

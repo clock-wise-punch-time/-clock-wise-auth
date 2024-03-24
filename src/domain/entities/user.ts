@@ -15,7 +15,7 @@ export class User {
   public verify_phone: boolean;
   public birthdate: Date;
   public password: string;
-  public role: 'SUPER_ADMIN' | 'ADMIN' | 'MODERATOR' | 'USER';
+  public role: "SUPER_ADMIN" | "ADMIN" | "MODERATOR" | "USER";
   public status: boolean;
   public deleted: boolean;
   public created_at: Date;

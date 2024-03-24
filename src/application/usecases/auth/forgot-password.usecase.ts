@@ -1,15 +1,15 @@
-import { Inject, Injectable, Logger } from '@nestjs/common';
-import { ForgotPasswordDTO } from 'src/application/dtos/forgot-password.dto';
-import { CommunicationInterface } from 'src/application/providers/interface/communication.interface';
-import { RecaptchaInterface } from 'src/application/providers/interface/recaptcha.interface';
-import { CodeService } from 'src/application/services/code.service';
-import { UserService } from 'src/application/services/user.service';
-import { requestResetPasswordTemplate } from 'src/application/templates/request-reset-password-email.template';
-import { GenerateCodeInterface } from 'src/core/utils/interfaces/generate-code.interface';
-import { Code } from 'src/domain/entities/code';
-import { CustomException } from 'src/domain/entities/error/custom-exception';
-import { User } from 'src/domain/types/user';
-import { ERROR_NAME } from 'src/infrastructure/enums/error-name.enum';
+import { Inject, Injectable, Logger } from "@nestjs/common";
+import { ForgotPasswordDTO } from "src/application/dtos/forgot-password.dto";
+import { CommunicationInterface } from "src/application/providers/interface/communication.interface";
+import { RecaptchaInterface } from "src/application/providers/interface/recaptcha.interface";
+import { CodeService } from "src/application/services/code.service";
+import { UserService } from "src/application/services/user.service";
+import { requestResetPasswordTemplate } from "src/application/templates/request-reset-password-email.template";
+import { GenerateCodeInterface } from "src/core/utils/interfaces/generate-code.interface";
+import { Code } from "src/domain/entities/code";
+import { CustomException } from "src/domain/entities/error/custom-exception";
+import { User } from "src/domain/types/user";
+import { ERROR_NAME } from "src/infrastructure/enums/error-name.enum";
 
 @Injectable()
 export class ForgotPasswordUseCase {
@@ -19,11 +19,11 @@ export class ForgotPasswordUseCase {
 
   constructor(
     private readonly user: UserService,
-    @Inject('SMTP')
+    @Inject("SMTP")
     private readonly communication: CommunicationInterface,
-    @Inject('Recaptcha')
+    @Inject("Recaptcha")
     private readonly recaptcha: RecaptchaInterface,
-    @Inject('GenerateCode')
+    @Inject("GenerateCode")
     private readonly generateCode: GenerateCodeInterface,
     private readonly code: CodeService,
   ) {}
@@ -43,7 +43,7 @@ export class ForgotPasswordUseCase {
   }
 
   async checkRecaptchaToken(recaptchaToken: string) {
-    if (this.enviromnet === 'production') {
+    if (this.enviromnet === "production") {
       await this.recaptcha.verify(recaptchaToken);
     }
   }
@@ -91,7 +91,7 @@ export class ForgotPasswordUseCase {
 
     const confirmResetPasswordRegister = new Code({
       user_id: userId,
-      type: 'PASSWORD_RESET',
+      type: "PASSWORD_RESET",
       code: token,
     });
 
@@ -102,7 +102,7 @@ export class ForgotPasswordUseCase {
     await this.communication.send({
       to: email,
       from: process.env.MAIL_FROM,
-      subject: '⌚ Solicitação de Redefinição de Senha - Clock-Wise',
+      subject: "⌚ Solicitação de Redefinição de Senha - Clock-Wise",
       html: requestResetPasswordTemplate(name, link),
     });
   }

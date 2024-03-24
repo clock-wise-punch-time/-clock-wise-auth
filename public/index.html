@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock Wise Auth - Demo</title>
+    <!-- Load custom fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Load reCAPTCHA API asynchronously -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        code {
+            background-color: #f9f9f9;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        textarea {
+            width: 90%;
+            height: 100px; 
+            resize: vertical; 
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        iframe#result {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Clock Wise Auth - Demo</h1>
+        <div>
+            <h2>Fingerprint ID:</h2>
+            <code id="fingerprint"></code>
+        </div>
+
+        <h2>reCAPTCHA Demo</h2>
+        <form id="myForm">
+            <!-- reCAPTCHA widget -->
+            <div class="g-recaptcha" data-sitekey="6Ld8fqEpAAAAAK4SwcY-H5uTTLBcxh6MSUlD0QHb"></div>
+            <br>
+            <button type="button" id="submitButton">Submit</button>
+        </form>
+
+        <h2>reCAPTCHA Token</h2>
+        <textarea id="token" readonly></textarea>
+        
+        <!-- Hidden iframe to handle reCAPTCHA response -->
+        <iframe id="result" name="captcha"></iframe>
+    </div>
+    
+    <script>
+        // Client-side form validation and submission handling
+        document.getElementById("submitButton").addEventListener("click", function(event) {
+            var response = grecaptcha.getResponse();
+            if (response.length === 0) {
+                alert("Please complete the reCAPTCHA.");
+            } else {
+                // Display the reCAPTCHA token
+                var token = grecaptcha.getResponse();
+                document.getElementById("token").value = token;
+            }
+        });
+        
+        // Initialize FingerprintJS and display the visitor ID
+        (async () => {
+            const FingerprintJS = await import('https://fpjscdn.net/v3/LxaumF4QyWmm5XWrxkMP');
+            const fp = await FingerprintJS.load();
+            const result = await fp.get();
+            const requestId = result.requestId;
+            document.getElementById("fingerprint").textContent = JSON.stringify(requestId);
+        })();
+    </script>
+</body>
+</html>

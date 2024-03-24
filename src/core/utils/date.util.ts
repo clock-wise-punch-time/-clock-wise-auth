@@ -1,6 +1,6 @@
-import { Injectable } from '@nestjs/common';
-import { DateInterface } from './interfaces/date.util';
-import { add, format, isBefore } from 'date-fns';
+import { Injectable } from "@nestjs/common";
+import { DateInterface } from "./interfaces/date.util";
+import { add, format, isBefore } from "date-fns";
 
 @Injectable()
 export class DateUtil implements DateInterface {
@@ -11,7 +11,7 @@ export class DateUtil implements DateInterface {
   isExpired(
     date: Date,
     duration: number,
-    unit: 'days' | 'months' | 'years' | 'hours',
+    unit: "days" | "months" | "years" | "hours",
   ): boolean {
     const currentDate = new Date();
     const providedDate = new Date(date);

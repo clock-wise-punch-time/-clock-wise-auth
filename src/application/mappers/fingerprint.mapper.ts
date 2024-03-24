@@ -1,4 +1,4 @@
-import { Fingerprint } from '../../domain/types/fingerprint';
+import { Fingerprint } from "../../domain/types/fingerprint";
 
 export class FingerprintMapper {
   fingerprint_id: string;
@@ -33,7 +33,7 @@ export class FingerprintMapper {
       props.products.identification.data.browserDetails.userAgent;
     this.vpn = props.products.vpn.data.result || false;
     this.bot =
-      props.products.botd.data.bot.result === 'notDetected' ? false : true;
+      props.products.botd.data.bot.result === "notDetected" ? false : true;
     this.root_apps = props.products.rootApps.data.result || false;
     this.emulator = props.products.emulator.data.result || false;
     this.latitude = props.products.ipInfo.data.v4.geolocation.latitude;

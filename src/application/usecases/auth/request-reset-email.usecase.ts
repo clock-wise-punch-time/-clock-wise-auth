@@ -1,13 +1,13 @@
-import { Inject, Injectable, Logger } from '@nestjs/common';
-import { CommunicationInterface } from 'src/application/providers/interface/communication.interface';
-import { CodeService } from 'src/application/services/code.service';
-import { UserService } from 'src/application/services/user.service';
-import { requestResetEmailTemplate } from 'src/application/templates/request-reset-email.template';
-import { RequestUser } from 'src/core/types/request.types';
-import { GenerateCodeInterface } from 'src/core/utils/interfaces/generate-code.interface';
-import { Code } from 'src/domain/entities/code';
-import { CustomException } from 'src/domain/entities/error/custom-exception';
-import { ERROR_NAME } from 'src/infrastructure/enums/error-name.enum';
+import { Inject, Injectable, Logger } from "@nestjs/common";
+import { CommunicationInterface } from "src/application/providers/interface/communication.interface";
+import { CodeService } from "src/application/services/code.service";
+import { UserService } from "src/application/services/user.service";
+import { requestResetEmailTemplate } from "src/application/templates/request-reset-email.template";
+import { RequestUser } from "src/core/types/request.types";
+import { GenerateCodeInterface } from "src/core/utils/interfaces/generate-code.interface";
+import { Code } from "src/domain/entities/code";
+import { CustomException } from "src/domain/entities/error/custom-exception";
+import { ERROR_NAME } from "src/infrastructure/enums/error-name.enum";
 
 @Injectable()
 export class RequestResetEmailUseCase {
@@ -17,15 +17,15 @@ export class RequestResetEmailUseCase {
   constructor(
     private readonly user: UserService,
     private readonly code: CodeService,
-    @Inject('SMTP')
+    @Inject("SMTP")
     private readonly communication: CommunicationInterface,
-    @Inject('GenerateCode')
+    @Inject("GenerateCode")
     private readonly generateCode: GenerateCodeInterface,
   ) {}
 
   async execute(data: RequestUser) {
     try {
-      const { user_id } = data['user'];
+      const { user_id } = data["user"];
       const user = await this.getEmail(user_id);
       await this.sendMailForResetEmail(user.id, user.name, user.email);
     } catch (error) {
@@ -46,7 +46,7 @@ export class RequestResetEmailUseCase {
 
     const confirmEmailCodeCreatorRegister = new Code({
       user_id: userId,
-      type: 'EMAIL_RESET',
+      type: "EMAIL_RESET",
       code: token,
     });
 
@@ -57,7 +57,7 @@ export class RequestResetEmailUseCase {
     await this.communication.send({
       to: email,
       from: process.env.MAIL_FROM,
-      subject: '⌚ Solicitação de Alteração de E-mail - Clock-Wise',
+      subject: "⌚ Solicitação de Alteração de E-mail - Clock-Wise",
       html: requestResetEmailTemplate(name, link),
     });
   }

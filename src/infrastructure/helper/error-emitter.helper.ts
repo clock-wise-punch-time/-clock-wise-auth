@@ -1,6 +1,6 @@
-import { CustomException } from '../../domain/entities/error/custom-exception';
-import { ERROR_NAME } from '../enums/error-name.enum';
-import { HTTP_NAME } from '../enums/http-name.enum';
+import { CustomException } from "../../domain/entities/error/custom-exception";
+import { ERROR_NAME } from "../enums/error-name.enum";
+import { HTTP_NAME } from "../enums/http-name.enum";
 
 export function errorEmitter(
   exception: Partial<Error>,
