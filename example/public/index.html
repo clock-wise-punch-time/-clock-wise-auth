@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        iframe#result {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <code id="fingerprint"></code>
+    <form target="captcha" id="myForm">
+        <!-- Add reCAPTCHA widget -->
+        <div class="g-recaptcha" data-sitekey="6Ld8fqEpAAAAAK4SwcY-H5uTTLBcxh6MSUlD0QHb"></div>
+        <br>
+        <button type="submit">Cique Aqui</button>
+    </form>
+
+    <h3>reCAPTCHA Token</h3>
+    <code id="token"></code>
+    <iframe id="result" name="captcha"></iframe>
+    <script>
+        // Optional: Add client-side validation
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            var response = grecaptcha.getResponse();
+            if(response.length == 0) {
+                event.preventDefault(); // Prevent form submission if reCAPTCHA is not completed
+                alert("Please complete the reCAPTCHA");
+            } else {
+                // Display the token in an h1 element
+                var token = grecaptcha.getResponse();
+                document.getElementById("token").textContent = "reCAPTCHA Token: " + token;
+            }
+        });
+        // Initialize the agent on page load.
+        const fpPromise = import('https://fpjscdn.net/v3/LxaumF4QyWmm5XWrxkMP')
+          .then(FingerprintJS => FingerprintJS.load())
+      
+        // Get the visitorId when you need it.
+        fpPromise
+          .then(fp => fp.get())
+          .then(result => {
+            console.log(result)
+            const visitorId = result.visitorId
+            console.log(visitorId)
+            document.querySelector('#fingerprint').innerHTML = JSON.stringify(result)
+          })
+      
+      </script>
+</body>
+</html>

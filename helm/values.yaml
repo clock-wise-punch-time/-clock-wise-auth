@@ -1,0 +1,29 @@
+name: clock-wise-auth
+deployment:
+  replicaCount: 1
+image: gfrancodev/clock-wise-auth:latest
+appPort: 3000
+srvPort: 80
+srvType: LoadBalancer
+
+configMapRef:
+  name: clock-wise-auth-config
+secretRef:
+  name: clock-wise-auth-secrets
+
+resources:
+  limits:
+    memory: 512Mi
+    cpu: "1"
+  requests:
+    memory: 256Mi
+    cpu: "0.2"
+
+hpa:
+  name: clock-wise-auth-hpa
+  namespace: clock-wise
+  deploymentName: clock-wise-auth
+  minReplicas: 1
+  maxReplicas: 10
+  cpuTargetAverageUtilization: 50
+  memoryTargetAverageUtilization: 50

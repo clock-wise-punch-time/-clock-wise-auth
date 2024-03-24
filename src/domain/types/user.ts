@@ -1,0 +1,24 @@
+export type User = {
+  id: string;
+  username: string;
+  registration: string;
+  cpf: string;
+  name: string;
+  lastname: string;
+  bio: string;
+  avatar: string;
+  profession: string;
+  bussiness: string;
+  email: string;
+  phone: string;
+  verify_email: boolean;
+  verify_phone: boolean;
+  birthdate: Date;
+  password: string;
+  role: 'SUPER_ADMIN' | 'ADMIN' | 'MODERATOR' | 'USER';
+  status: boolean;
+  deleted: boolean;
+  created_at: Date;
+  updated_at: Date;
+  delete_at: Date;
+};

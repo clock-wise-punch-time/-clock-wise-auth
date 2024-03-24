@@ -1,0 +1,35 @@
+version: '3.3'
+
+services:
+  redis:
+    image: redis:latest
+    container_name: clock-wise-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./docker/redis_data:/data
+
+  mongo:
+    image: mongo:latest
+    container_name: clock-wise-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./docker/mongodb_data:/data/db
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: clock-wise-auth
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app
+      - ./docker/.env:/app/.env 
+    depends_on:
+      - redis
+      - mongo_primary
+
+volumes:
+  mongodb_data:

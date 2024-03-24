@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clock-wise-auth
+  namespace: microservices
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clock-wise-auth
+  template:
+    metadata:
+      labels:
+        app: clock-wise-auth
+    spec:
+      containers:
+        - name: clock-wise-auth
+          image: gfrancodev/clock-wise-auth:latest
+          resources:
+            limits:
+              memory: 512Mi
+              cpu: "1"
+            requests:
+              memory: 256Mi
+              cpu: "0.2"
+          ports:
+            - containerPort: 3000
+              name: http
+          envFrom:
+            - configMapRef:
+                - name: clock-wise-auth-config

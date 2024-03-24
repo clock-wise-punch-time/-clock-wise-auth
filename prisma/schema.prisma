@@ -1,0 +1,124 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model user {
+  id                 String               @id @default(uuid()) @map("_id")
+  username           String               @unique
+  registration       String               @unique
+  cpf                String               @unique
+  name               String
+  lastname           String
+  bio                String?
+  avatar             String?
+  profession         String?
+  bussiness          String?
+  email              String               @unique
+  phone              String
+  verify_email       Boolean              @default(false)
+  verify_phone       Boolean              @default(false)
+  birthdate          DateTime
+  password           String
+  role               roles
+  status             Boolean              @default(false)
+  deleted            Boolean              @default(false)
+  created_at         DateTime             @default(now())
+  updated_at         DateTime?            @updatedAt
+  delete_at          DateTime?
+  guideline_accepted guideline_accepted[]
+  code               code[]
+  devices            device[]
+}
+
+model guideline {
+  id                 String               @id @default(uuid()) @map("_id")
+  title              String
+  description        String
+  type               guideline_types
+  version            Int
+  status             Boolean              @default(false)
+  deleted            Boolean              @default(false)
+  created_at         DateTime             @default(now())
+  updated_at         DateTime?            @updatedAt
+  delete_at          DateTime?
+  guideline_accepted guideline_accepted[]
+}
+
+model guideline_accepted {
+  id           String    @id @default(uuid()) @map("_id")
+  guideline    guideline @relation(fields: [guideline_id], references: [id])
+  device       device    @relation(fields: [device_id], references: [id])
+  user         user      @relation(fields: [user_id], references: [id])
+  guideline_id String
+  device_id    String
+  user_id      String
+  status       Boolean   @default(false)
+  created_at   DateTime  @default(now())
+  updated_at   DateTime? @updatedAt
+}
+
+model device {
+  id                  String               @id @default(uuid()) @map("_id")
+  user_id             String
+  fingerprint_id      String
+  address             String
+  os                  String
+  browser             String
+  browser_version     String
+  user_agent          String?
+  vpn                 Boolean?             @default(false)
+  bot                 Boolean?             @default(false)
+  root_apps           Boolean?             @default(false)
+  emulator            Boolean?             @default(false)
+  latitude            Float?
+  longitude           Float?
+  city                String?
+  state_code          String?
+  state_name          String?
+  country_code        String?
+  country_name        String?
+  continent_code      String?
+  continent_name      String?
+  guidelines_accepted guideline_accepted[]
+  created_at          DateTime             @default(now())
+  updated_at          DateTime?            @updatedAt
+  deleted_at          DateTime?
+  user                user                 @relation(fields: [user_id], references: [id], onDelete: Cascade)
+}
+
+enum roles {
+  SUPER_ADMIN
+  ADMIN
+  MODERATOR
+  USER
+}
+
+model code {
+  id         String     @id @default(uuid()) @map("_id")
+  user_id    String
+  code       String
+  type       code_types
+  status     Boolean    @default(false)
+  created_at DateTime   @default(now())
+  updated_at DateTime?  @updatedAt
+  deleted_at DateTime?
+  user       user       @relation(fields: [user_id], references: [id], onDelete: Cascade)
+}
+
+enum code_types {
+  EMAIL_VERIFY
+  EMAIL_RESET
+  PASSWORD_RESET
+}
+
+enum guideline_types {
+  PRIVACY_POLICY
+  TERMS_OF_USE
+  LABOR_COMPLIANCE
+  COOKIE_POLICY
+}

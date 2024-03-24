@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.name }}
+  namespace: {{ default "default" .Release.Namespace }}
+spec:
+  ports:
+    - name: http
+      port: {{ .Values.srvPort }}
+      targetPort: http
+  selector:
+    app: {{ .Values.name }}
+  type: {{ .Values.srvType }}

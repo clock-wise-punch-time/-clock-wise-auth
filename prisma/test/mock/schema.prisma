@@ -1,0 +1,16 @@
+// schema.prisma
+
+model User {
+  id Int @id @default(autoincrement())
+  name String
+  email String @unique
+  posts Post[]
+}
+
+model Post {
+  id Int @id @default(autoincrement())
+  title String
+  content String
+  userId Int
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+}

@@ -1,0 +1,26 @@
+export type Device = {
+  id: string;
+  user_id: string;
+  fingerprint_id: string;
+  address: string;
+  os: string;
+  browser: string;
+  browser_version: string;
+  user_agent: string;
+  vpn: boolean;
+  bot: boolean;
+  root_apps: boolean;
+  emulator: boolean;
+  latitude: number;
+  longitude: number;
+  city: string;
+  state_code: string;
+  state_name: string;
+  country_code: string;
+  country_name: string;
+  continent_code: string;
+  continent_name: string;
+  created_at: Date;
+  updated_at: Date;
+  deleted_at: Date;
+};
