@@ -6,5 +6,5 @@ export function getEnumKeyByValue(
     return undefined;
   }
 
-  return Object.keys(enumObj).find(key => enumObj[key] === value);
+  return Object.keys(enumObj).find((key) => enumObj[key] === value);
 }

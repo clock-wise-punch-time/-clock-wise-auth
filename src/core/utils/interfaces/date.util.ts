@@ -3,6 +3,6 @@ export interface DateInterface {
   isExpired(
     date: Date,
     duration: number,
-    unit: "days" | "months" | "years" | "hours",
+    unit: 'days' | 'months' | 'years' | 'hours',
   ): boolean;
 }

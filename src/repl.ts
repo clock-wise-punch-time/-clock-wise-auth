@@ -1,5 +1,5 @@
-import { repl } from "@nestjs/core";
-import { AppModule } from "./app.module";
+import { repl } from '@nestjs/core';
+import { AppModule } from './app.module';
 
 /**
  * Inicializa o REPL (Read-Eval-Print Loop) para a aplicação NestJS.

@@ -1,7 +1,7 @@
-import { HttpService } from "@nestjs/axios";
-import { lastValueFrom } from "rxjs";
-import { CustomException } from "src/domain/entities/error/custom-exception";
-import { ERROR_NAME } from "src/infrastructure/enums/error-name.enum";
+import { HttpService } from '@nestjs/axios';
+import { lastValueFrom } from 'rxjs';
+import { CustomException } from 'src/domain/entities/error/custom-exception';
+import { ERROR_NAME } from 'src/infrastructure/enums/error-name.enum';
 
 export class GoogleRecaptcha {
   protected secretKey = process.env.GOOGLE_RECAPTCHA_SECRET_KEY;
@@ -11,7 +11,7 @@ export class GoogleRecaptcha {
     try {
       await lastValueFrom(
         this.httpService.post(
-          "https://www.google.com/recaptcha/api/siteverify",
+          'https://www.google.com/recaptcha/api/siteverify',
           {
             secret: this.secretKey,
             response: token,

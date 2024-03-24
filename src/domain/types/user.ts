@@ -15,7 +15,7 @@ export type User = {
   verify_phone: boolean;
   birthdate: Date;
   password: string;
-  role: "SUPER_ADMIN" | "ADMIN" | "MODERATOR" | "USER";
+  role: 'SUPER_ADMIN' | 'ADMIN' | 'MODERATOR' | 'USER';
   status: boolean;
   deleted: boolean;
   created_at: Date;

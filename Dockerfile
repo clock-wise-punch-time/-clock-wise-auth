@@ -9,6 +9,7 @@ WORKDIR /app
 
 USER node
 COPY --chown=node:node package*.json .
+COPY --chown=node:node entrypoint.sh .
 COPY --chown=node:node prisma ./prisma/
 COPY --chown=node:node security ./security/
 COPY --chown=node:node entrypoint.sh entrypoint.sh
@@ -31,7 +32,7 @@ COPY --chown=node:node package*.json ./
 
 COPY --chown=node:node prisma ./prisma/
 COPY --chown=node:node security ./security/
-COPY --chown=node:node entrypoint.sh entrypoint.sh
+COPY --chown=node:node entrypoint.sh ./
 
 COPY --chown=node:node --from=development /app/node_modules ./node_modules
 
@@ -56,6 +57,6 @@ COPY --chown=node:node --from=build /app/dist ./dist
 COPY --chown=node:node --from=build /app/package*.json ./
 COPY --chown=node:node --from=build /app/prisma ./prisma
 COPY --chown=node:node --from=build /app/security ./security
-COPY --chown=node:node --from=build entrypoint.sh entrypoint.sh
+COPY --chown=node:node --from=build /app/entrypoint.sh entrypoint.sh
 
-ENTRYPOINT [ "sh", "entrypoin.sh" ]
+ENTRYPOINT [ "npm", "run", "start:prod" ]

@@ -5,7 +5,7 @@ import {
   guideline_accepted,
   device,
   code,
-} from "@prisma/client";
+} from '@prisma/client';
 
 /**
  * Representa os nomes dos modelos no Prisma.
@@ -14,11 +14,11 @@ import {
  */
 
 export type ModelName =
-  | "user"
-  | "guideline"
-  | "guideline_accepted"
-  | "device"
-  | "code";
+  | 'user'
+  | 'guideline'
+  | 'guideline_accepted'
+  | 'device'
+  | 'code';
 
 /**
  * Representa os modelos Prisma e seus tipos associados.
@@ -69,40 +69,40 @@ interface PrismaRelations {
    * Relações associadas ao modelo `user`.
    */
   user: {
-    guideline_accepted: PrismaRelations["guideline_accepted"][];
-    code: PrismaRelations["code"][];
-    devices: PrismaRelations["device"][];
+    guideline_accepted: PrismaRelations['guideline_accepted'][];
+    code: PrismaRelations['code'][];
+    devices: PrismaRelations['device'][];
   } & user;
 
   /**
    * Relações associadas ao modelo `guideline`.
    */
   guideline: {
-    guideline_accepted: PrismaRelations["guideline_accepted"][];
+    guideline_accepted: PrismaRelations['guideline_accepted'][];
   } & guideline;
 
   /**
    * Relações associadas ao modelo `guideline_accepted`.
    */
   guideline_accepted: {
-    guideline: PrismaRelations["guideline"];
-    device: PrismaRelations["device"];
-    user: PrismaRelations["user"];
+    guideline: PrismaRelations['guideline'];
+    device: PrismaRelations['device'];
+    user: PrismaRelations['user'];
   } & guideline_accepted;
 
   /**
    * Relações associadas ao modelo `device`.
    */
   device: {
-    guidelines_accepted: PrismaRelations["guideline_accepted"][];
-    user: PrismaRelations["user"];
+    guidelines_accepted: PrismaRelations['guideline_accepted'][];
+    user: PrismaRelations['user'];
   } & device;
 
   /**
    * Relações associadas ao modelo `code`.
    */
   code: {
-    user: PrismaRelations["user"];
+    user: PrismaRelations['user'];
   } & code;
 }
 

@@ -4,24 +4,24 @@ import {
   ExceptionFilter,
   HttpStatus,
   Logger,
-} from "@nestjs/common";
-import { AbstractHttpAdapter, HttpAdapterHost } from "@nestjs/core";
-import { RequestUser } from "src/core/types/request.types";
-import { CustomException } from "src/domain/entities/error/custom-exception";
-import { CustomExceptionMapper } from "src/domain/mappers/custom-exception.mapper";
-import { APP_CODE } from "src/infrastructure/enums/app-code.enum";
-import { APP_MESSAGE } from "src/infrastructure/enums/app-message.enum";
-import { APP_STATUS_CODE } from "src/infrastructure/enums/app-status-code.enum";
-import { HTTP_MESSAGE } from "src/infrastructure/enums/http-message.enum";
-import { INFRA_CODE } from "src/infrastructure/enums/infra-code.enum";
-import { INFRA_MESSAGE } from "src/infrastructure/enums/infra-message.enum";
-import { INFRA_STATUS_CODE } from "src/infrastructure/enums/infra-status-code.enum";
-import { getEnumKeyByValue } from "src/infrastructure/helper/get-enum-key-by-value.helper";
-import { getValueInConcatEnum } from "src/infrastructure/helper/get-value-in-concat-enum";
+} from '@nestjs/common';
+import { AbstractHttpAdapter, HttpAdapterHost } from '@nestjs/core';
+import { RequestUser } from 'src/core/types/request.types';
+import { CustomException } from 'src/domain/entities/error/custom-exception';
+import { CustomExceptionMapper } from 'src/domain/mappers/custom-exception.mapper';
+import { APP_CODE } from 'src/infrastructure/enums/app-code.enum';
+import { APP_MESSAGE } from 'src/infrastructure/enums/app-message.enum';
+import { APP_STATUS_CODE } from 'src/infrastructure/enums/app-status-code.enum';
+import { HTTP_MESSAGE } from 'src/infrastructure/enums/http-message.enum';
+import { INFRA_CODE } from 'src/infrastructure/enums/infra-code.enum';
+import { INFRA_MESSAGE } from 'src/infrastructure/enums/infra-message.enum';
+import { INFRA_STATUS_CODE } from 'src/infrastructure/enums/infra-status-code.enum';
+import { getEnumKeyByValue } from 'src/infrastructure/helper/get-enum-key-by-value.helper';
+import { getValueInConcatEnum } from 'src/infrastructure/helper/get-value-in-concat-enum';
 
 @Catch(CustomException)
 export class ErrorBuilderFilter implements ExceptionFilter {
-  protected logger = new Logger("ERROR");
+  protected logger = new Logger('ERROR');
   private httpAdapter: AbstractHttpAdapter;
 
   constructor(adapterHost: HttpAdapterHost) {
@@ -35,7 +35,7 @@ export class ErrorBuilderFilter implements ExceptionFilter {
     const ctx = host.switchToHttp();
     const response = ctx.getResponse();
     const request = ctx.getRequest() as RequestUser;
-    const user = request["user"];
+    const user = request['user'];
     const path = request.path;
 
     console.log(exception);
@@ -49,7 +49,7 @@ export class ErrorBuilderFilter implements ExceptionFilter {
     this.httpAdapter.reply(response, errorBody, errorBody.error.status);
   }
 
-  loggedInUserLog(user: RequestUser["user"]) {
+  loggedInUserLog(user: RequestUser['user']) {
     if (user) {
       this.logger.verbose(
         `LOGGED WITH USER: ${user.user_id} ROLE: ${user.role}`,
@@ -110,7 +110,7 @@ export class ErrorBuilderFilter implements ExceptionFilter {
       key,
     );
 
-    const defaultMessage = "ERROR_NOT_TRACKED";
+    const defaultMessage = 'ERROR_NOT_TRACKED';
     return String(getValue) || defaultMessage;
   }
 }

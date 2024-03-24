@@ -1,8 +1,8 @@
-import { CanActivate, ExecutionContext, Injectable } from "@nestjs/common";
-import { Reflector } from "@nestjs/core";
-import { RequestUser } from "src/core/types/request.types";
-import { ROLES_KEY } from "../decorators/roles.decorator";
-import { Roles } from "src/domain/types/roles";
+import { CanActivate, ExecutionContext, Injectable } from '@nestjs/common';
+import { Reflector } from '@nestjs/core';
+import { RequestUser } from 'src/core/types/request.types';
+import { ROLES_KEY } from '../decorators/roles.decorator';
+import { Roles } from 'src/domain/types/roles';
 
 @Injectable()
 export class UserPermissionGuard implements CanActivate {
@@ -20,7 +20,7 @@ export class UserPermissionGuard implements CanActivate {
 
   getUserRole(context: ExecutionContext) {
     const request = context.switchToHttp().getRequest<RequestUser>();
-    return request["user"]?.role;
+    return request['user']?.role;
   }
 
   checkRoutePermissions(reflector: Reflector, context: ExecutionContext) {

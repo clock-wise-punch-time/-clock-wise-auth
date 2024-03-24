@@ -1,5 +1,5 @@
-import { compareSync, genSaltSync, hashSync } from "bcrypt";
-import { HasherInterface } from "./interfaces/hasher.interface";
+import { compareSync, genSaltSync, hashSync } from 'bcrypt';
+import { HasherInterface } from './interfaces/hasher.interface';
 
 export class HasherUtil implements HasherInterface {
   encrypt(text: string): string {

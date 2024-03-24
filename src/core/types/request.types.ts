@@ -1,4 +1,4 @@
-import { Request } from "express";
+import { Request } from 'express';
 
 export interface JWTDecryptPayload {
   user_id: string;

@@ -1,6 +1,6 @@
-import * as crypto from "crypto";
-import { Logger } from "@nestjs/common";
-import { RSAInterface } from "./interfaces/rsa.interface";
+import * as crypto from 'crypto';
+import { Logger } from '@nestjs/common';
+import { RSAInterface } from './interfaces/rsa.interface';
 
 export class RSAUtil implements RSAInterface {
   protected logger = new Logger(RSAUtil.name);
@@ -17,14 +17,14 @@ export class RSAUtil implements RSAInterface {
 
   encrypt(data: Record<string, unknown>): string {
     const textJsonToString = JSON.stringify(data);
-    const bufferData = Buffer.from(textJsonToString, "utf8");
+    const bufferData = Buffer.from(textJsonToString, 'utf8');
     const encryptedData = crypto.publicEncrypt(this.publicKey, bufferData);
-    return encryptedData.toString("base64");
+    return encryptedData.toString('base64');
   }
 
   decrypt(encryptedData: string): Record<string, unknown> {
     try {
-      const bufferData = Buffer.from(encryptedData, "base64");
+      const bufferData = Buffer.from(encryptedData, 'base64');
       const decryptedData = crypto.privateDecrypt(
         {
           key: this.privateKey,
@@ -32,7 +32,7 @@ export class RSAUtil implements RSAInterface {
         },
         bufferData,
       );
-      const textPlain = decryptedData.toString("utf8");
+      const textPlain = decryptedData.toString('utf8');
       return JSON.parse(textPlain);
     } catch (error) {
       this.logger.error(error);

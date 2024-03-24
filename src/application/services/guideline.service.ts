@@ -1,11 +1,11 @@
-import { HttpException, Inject } from "@nestjs/common";
-import { IPrisma } from "src/domain/repositories/interfaces/prisma.interfaces";
-import { Guideline } from "src/domain/types/guideline";
+import { HttpException, Inject } from '@nestjs/common';
+import { IPrisma } from 'src/domain/repositories/interfaces/prisma.interfaces';
+import { Guideline } from 'src/domain/types/guideline';
 
 export class GuidelineService {
   constructor(
-    @Inject("guideline")
-    private readonly guideline: IPrisma<"guideline">,
+    @Inject('guideline')
+    private readonly guideline: IPrisma<'guideline'>,
   ) {}
 
   async findAll(filter: Partial<Guideline>): Promise<Partial<Guideline>[]> {
@@ -19,11 +19,11 @@ export class GuidelineService {
   async findAllLatestVersion() {
     try {
       const allGuidelines = await this?.guideline.findAll({
-        orderBy: [{ type: "asc" }, { version: "desc" }],
+        orderBy: [{ type: 'asc' }, { version: 'desc' }],
       });
 
       const uniqueGuidelines = {};
-      allGuidelines.forEach(guideline => {
+      allGuidelines.forEach((guideline) => {
         if (!uniqueGuidelines[guideline.type]) {
           uniqueGuidelines[guideline.type] = guideline;
         }

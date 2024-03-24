@@ -1,11 +1,11 @@
-import { HttpException, Inject } from "@nestjs/common";
-import { IPrisma } from "src/domain/repositories/interfaces/prisma.interfaces";
-import { GuidelineAccepted } from "src/domain/types/guideline_accepted";
+import { HttpException, Inject } from '@nestjs/common';
+import { IPrisma } from 'src/domain/repositories/interfaces/prisma.interfaces';
+import { GuidelineAccepted } from 'src/domain/types/guideline_accepted';
 
 export class GuidelineAccepetedService {
   constructor(
-    @Inject("guideline_accepted")
-    private readonly guideline_accepted: IPrisma<"guideline_accepted">,
+    @Inject('guideline_accepted')
+    private readonly guideline_accepted: IPrisma<'guideline_accepted'>,
   ) {}
 
   async findAll(

@@ -1,6 +1,6 @@
-import { MailerService } from "@nestjs-modules/mailer";
-import { Injectable, Logger } from "@nestjs/common";
-import { CommunicationInterface } from "./interface/communication.interface";
+import { MailerService } from '@nestjs-modules/mailer';
+import { Injectable, Logger } from '@nestjs/common';
+import { CommunicationInterface } from './interface/communication.interface';
 
 /**
  * Provedor de comunicação utilizando o serviço SMTP para envio de e-mails.

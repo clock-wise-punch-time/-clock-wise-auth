@@ -1,20 +1,20 @@
-import { Inject, Injectable } from "@nestjs/common";
-import { ResetPasswordDTO } from "src/application/dtos/reset-password.dto";
-import { CodeService } from "src/application/services/code.service";
-import { UserService } from "src/application/services/user.service";
-import { DateInterface } from "src/core/utils/interfaces/date.util";
-import { HasherInterface } from "src/core/utils/interfaces/hasher.interface";
-import { CustomException } from "src/domain/entities/error/custom-exception";
-import { ERROR_NAME } from "src/infrastructure/enums/error-name.enum";
+import { Inject, Injectable } from '@nestjs/common';
+import { ResetPasswordDTO } from 'src/application/dtos/reset-password.dto';
+import { CodeService } from 'src/application/services/code.service';
+import { UserService } from 'src/application/services/user.service';
+import { DateInterface } from 'src/core/utils/interfaces/date.util';
+import { HasherInterface } from 'src/core/utils/interfaces/hasher.interface';
+import { CustomException } from 'src/domain/entities/error/custom-exception';
+import { ERROR_NAME } from 'src/infrastructure/enums/error-name.enum';
 
 @Injectable()
 export class ResetPasswordUseCase {
   constructor(
     private readonly user: UserService,
     private readonly code: CodeService,
-    @Inject("Date")
+    @Inject('Date')
     private readonly date: DateInterface,
-    @Inject("Hasher")
+    @Inject('Hasher')
     private readonly hasher: HasherInterface,
   ) {}
 
@@ -43,10 +43,10 @@ export class ResetPasswordUseCase {
   async tokenIsExpirated(userId: string, token: string) {
     const code = await this.code.findOne({
       user_id: userId,
-      type: "PASSWORD_RESET",
+      type: 'PASSWORD_RESET',
       code: token,
     });
-    const isExpired = this.date.isExpired(code.created_at, 2, "hours");
+    const isExpired = this.date.isExpired(code.created_at, 2, 'hours');
     if (isExpired) {
       throw new CustomException(ERROR_NAME.CODE_VALIDATION_FAILED);
     }

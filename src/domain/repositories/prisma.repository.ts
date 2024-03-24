@@ -2,9 +2,9 @@ import {
   Injectable,
   InternalServerErrorException,
   Logger,
-} from "@nestjs/common";
-import { PrismaClient } from "@prisma/client";
-import { IPrismaRepository } from "./interfaces/prisma.interfaces";
+} from '@nestjs/common';
+import { PrismaClient } from '@prisma/client';
+import { IPrismaRepository } from './interfaces/prisma.interfaces';
 
 @Injectable()
 export class PrismaRepository implements IPrismaRepository {
@@ -517,13 +517,13 @@ export class PrismaRepository implements IPrismaRepository {
     const result: Record<string, any> = {};
 
     for (const relation of relations) {
-      const nestedRelations = relation.split(".");
+      const nestedRelations = relation.split('.');
       let currentAcc = result;
 
       for (let i = 0; i < nestedRelations.length; i++) {
         const nestedRelation = nestedRelations[i];
 
-        if (nestedRelation !== "") {
+        if (nestedRelation !== '') {
           if (!currentAcc[nestedRelation]) {
             currentAcc[nestedRelation] =
               i === nestedRelations.length - 1 ? true : { include: {} };

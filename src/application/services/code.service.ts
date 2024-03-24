@@ -1,11 +1,11 @@
-import { HttpException, Inject } from "@nestjs/common";
-import { Code } from "src/domain/entities/code";
-import { IPrisma } from "src/domain/repositories/interfaces/prisma.interfaces";
+import { HttpException, Inject } from '@nestjs/common';
+import { Code } from 'src/domain/entities/code';
+import { IPrisma } from 'src/domain/repositories/interfaces/prisma.interfaces';
 
 export class CodeService {
   constructor(
-    @Inject("code")
-    private readonly code: IPrisma<"code">,
+    @Inject('code')
+    private readonly code: IPrisma<'code'>,
   ) {}
 
   async findAll(filter: Partial<Code>): Promise<Partial<Code>[]> {

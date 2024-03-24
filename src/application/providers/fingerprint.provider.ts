@@ -1,9 +1,9 @@
 import {
   FingerprintJsServerApiClient,
   Region,
-} from "@fingerprintjs/fingerprintjs-pro-server-api";
-import { Fingerprint } from "../../domain/types/fingerprint";
-import { FingerprintMapper } from "../mappers/fingerprint.mapper";
+} from '@fingerprintjs/fingerprintjs-pro-server-api';
+import { Fingerprint } from '../../domain/types/fingerprint';
+import { FingerprintMapper } from '../mappers/fingerprint.mapper';
 
 export class FingerprintProvider {
   private client = new FingerprintJsServerApiClient({

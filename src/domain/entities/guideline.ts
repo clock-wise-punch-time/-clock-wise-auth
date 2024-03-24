@@ -3,10 +3,10 @@ export class Guideline {
   public title: string;
   public description: string;
   public type:
-    | "PRIVACY_POLICY"
-    | "TERMS_OF_USE"
-    | "LABOR_COMPLIANCE"
-    | "COOKIE_POLICY";
+    | 'PRIVACY_POLICY'
+    | 'TERMS_OF_USE'
+    | 'LABOR_COMPLIANCE'
+    | 'COOKIE_POLICY';
   public version: number;
   public status: boolean;
   public deleted: boolean;
