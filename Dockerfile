@@ -41,8 +41,6 @@ ENV NODE_ENV production
 
 RUN npm ci --only=production && npm cache clean --force
 
-RUN npm run prisma:generate
-
 USER node
 
 ###################
