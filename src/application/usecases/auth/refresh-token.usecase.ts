@@ -1,13 +1,13 @@
-import { Inject, Injectable } from '@nestjs/common';
-import { JwtService } from '@nestjs/jwt';
-import { RefreshTokenMapper } from 'src/application/mappers/refresh-token.mapper';
-import { RefreshTokenService } from 'src/application/services/refresh-token.service';
-import { UserService } from 'src/application/services/user.service';
-import { RequestUser } from 'src/core/types/request.types';
-import { GenerateCodeInterface } from 'src/core/utils/interfaces/generate-code.interface';
-import { RSAInterface } from 'src/core/utils/interfaces/rsa.interface';
-import { CustomException } from 'src/domain/entities/error/custom-exception';
-import { ERROR_NAME } from 'src/infrastructure/enums/error-name.enum';
+import { Inject, Injectable } from "@nestjs/common";
+import { JwtService } from "@nestjs/jwt";
+import { RefreshTokenMapper } from "src/application/mappers/refresh-token.mapper";
+import { RefreshTokenService } from "src/application/services/refresh-token.service";
+import { UserService } from "src/application/services/user.service";
+import { RequestUser } from "src/core/types/request.types";
+import { GenerateCodeInterface } from "src/core/utils/interfaces/generate-code.interface";
+import { RSAInterface } from "src/core/utils/interfaces/rsa.interface";
+import { CustomException } from "src/domain/entities/error/custom-exception";
+import { ERROR_NAME } from "src/infrastructure/enums/error-name.enum";
 
 type Data = {
   refreshToken: string;
@@ -19,11 +19,11 @@ export class RefreshTokenUseCase {
 
   constructor(
     private readonly user: UserService,
-    @Inject('RSA')
+    @Inject("RSA")
     private readonly rsa: RSAInterface,
     private readonly refreshToken: RefreshTokenService,
     private readonly jwt: JwtService,
-    @Inject('GenerateCode')
+    @Inject("GenerateCode")
     private readonly generateCode: GenerateCodeInterface,
   ) {}
 

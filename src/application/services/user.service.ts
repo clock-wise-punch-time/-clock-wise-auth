@@ -2,14 +2,14 @@ import {
   HttpException,
   Inject,
   InternalServerErrorException,
-} from '@nestjs/common';
-import { IPrisma } from 'src/domain/repositories/interfaces/prisma.interfaces';
-import { User } from 'src/domain/types/user';
+} from "@nestjs/common";
+import { IPrisma } from "src/domain/repositories/interfaces/prisma.interfaces";
+import { User } from "src/domain/types/user";
 
 export class UserService {
   constructor(
-    @Inject('user')
-    private readonly user: IPrisma<'user'>,
+    @Inject("user")
+    private readonly user: IPrisma<"user">,
   ) {}
 
   async findAll(filter: Partial<User>): Promise<Partial<User>[]> {
@@ -32,7 +32,7 @@ export class UserService {
     try {
       return await this.user?.create(data);
     } catch (error) {
-      throw new InternalServerErrorException('Failure to create user');
+      throw new InternalServerErrorException("Failure to create user");
     }
   }
 

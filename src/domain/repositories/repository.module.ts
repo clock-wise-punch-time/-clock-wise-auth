@@ -1,10 +1,10 @@
-import { Global, Module } from '@nestjs/common';
-import { PrismaClient } from '@prisma/client';
-import { PrismaConnection } from 'src/domain/connection/prisma.connection';
-import { PrismaRepository } from './prisma.repository';
-import { CacheRepository } from './cache.repository';
+import { Global, Module } from "@nestjs/common";
+import { PrismaClient } from "@prisma/client";
+import { PrismaConnection } from "src/domain/connection/prisma.connection";
+import { PrismaRepository } from "./prisma.repository";
+import { CacheRepository } from "./cache.repository";
 
-const entities = ['user', 'guideline', 'guideline_accepted', 'device', 'code'];
+const entities = ["user", "guideline", "guideline_accepted", "device", "code"];
 
 @Global()
 @Module({
@@ -12,7 +12,7 @@ const entities = ['user', 'guideline', 'guideline_accepted', 'device', 'code'];
   providers: [
     PrismaClient,
     PrismaConnection,
-    ...entities.map((entity) => ({
+    ...entities.map(entity => ({
       provide: entity,
       useFactory: (prisma: PrismaClient) => {
         return new PrismaRepository(prisma, entity);
@@ -20,14 +20,14 @@ const entities = ['user', 'guideline', 'guideline_accepted', 'device', 'code'];
       inject: [PrismaClient],
     })),
     {
-      provide: 'Cache',
+      provide: "Cache",
       useClass: CacheRepository,
     },
   ],
   exports: [
     PrismaClient,
     PrismaConnection,
-    ...entities.map((entity) => ({
+    ...entities.map(entity => ({
       provide: entity,
       useFactory: (prisma: PrismaClient) => {
         return new PrismaRepository(prisma, entity);
@@ -35,7 +35,7 @@ const entities = ['user', 'guideline', 'guideline_accepted', 'device', 'code'];
       inject: [PrismaClient],
     })),
     {
-      provide: 'Cache',
+      provide: "Cache",
       useClass: CacheRepository,
     },
   ],

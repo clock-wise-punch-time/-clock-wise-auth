@@ -1,16 +1,16 @@
-import { Inject, Injectable, Logger } from '@nestjs/common';
-import { JwtService } from '@nestjs/jwt';
-import { LoginDTO } from 'src/application/dtos/login.dto';
-import { LogginMapper } from 'src/application/mappers/login.mapper';
-import { RecaptchaInterface } from 'src/application/providers/interface/recaptcha.interface';
-import { RefreshTokenService } from 'src/application/services/refresh-token.service';
-import { UserService } from 'src/application/services/user.service';
-import { GenerateCodeInterface } from 'src/core/utils/interfaces/generate-code.interface';
-import { HasherInterface } from 'src/core/utils/interfaces/hasher.interface';
-import { RSAInterface } from 'src/core/utils/interfaces/rsa.interface';
-import { CustomException } from 'src/domain/entities/error/custom-exception';
-import { User } from 'src/domain/types/user';
-import { ERROR_NAME } from 'src/infrastructure/enums/error-name.enum';
+import { Inject, Injectable, Logger } from "@nestjs/common";
+import { JwtService } from "@nestjs/jwt";
+import { LoginDTO } from "src/application/dtos/login.dto";
+import { LogginMapper } from "src/application/mappers/login.mapper";
+import { RecaptchaInterface } from "src/application/providers/interface/recaptcha.interface";
+import { RefreshTokenService } from "src/application/services/refresh-token.service";
+import { UserService } from "src/application/services/user.service";
+import { GenerateCodeInterface } from "src/core/utils/interfaces/generate-code.interface";
+import { HasherInterface } from "src/core/utils/interfaces/hasher.interface";
+import { RSAInterface } from "src/core/utils/interfaces/rsa.interface";
+import { CustomException } from "src/domain/entities/error/custom-exception";
+import { User } from "src/domain/types/user";
+import { ERROR_NAME } from "src/infrastructure/enums/error-name.enum";
 
 @Injectable()
 export class LoginUseCase {
@@ -20,15 +20,15 @@ export class LoginUseCase {
 
   constructor(
     private readonly user: UserService,
-    @Inject('Hasher')
+    @Inject("Hasher")
     private readonly hasher: HasherInterface,
-    @Inject('GenerateCode')
+    @Inject("GenerateCode")
     private readonly generateCode: GenerateCodeInterface,
-    @Inject('RSA')
+    @Inject("RSA")
     private readonly rsa: RSAInterface,
     private readonly refreshToken: RefreshTokenService,
     private readonly jwt: JwtService,
-    @Inject('Recaptcha')
+    @Inject("Recaptcha")
     private readonly recaptcha: RecaptchaInterface,
   ) {}
 
@@ -55,7 +55,7 @@ export class LoginUseCase {
   }
 
   async checkRecaptchaToken(recaptchaToken: string) {
-    if (this.enviromnet === 'production') {
+    if (this.enviromnet === "production") {
       await this.recaptcha.verify(recaptchaToken);
     }
   }
@@ -73,8 +73,8 @@ export class LoginUseCase {
       verifyRegistration,
     ]);
 
-    this.logger.debug('VERIFY USERNAME', userByUsername);
-    this.logger.debug('VERIFY REGISTRATION', userByUsername);
+    this.logger.debug("VERIFY USERNAME", userByUsername);
+    this.logger.debug("VERIFY REGISTRATION", userByUsername);
 
     const user = (userByUsername || userByRegistration) as User;
 

@@ -1,21 +1,21 @@
-import { MailerModule } from '@nestjs-modules/mailer';
-import { Global, Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
-import { APP_GUARD } from '@nestjs/core';
-import { JwtModule, JwtService } from '@nestjs/jwt';
-import { PassportModule } from '@nestjs/passport';
-import { JwtStrategy } from './config/jwt.strategy';
-import { GenerateCodeUtil } from './utils/generete-code.util';
-import { HasherUtil } from './utils/hasher.util';
-import { RSAUtil } from './utils/rsa.util';
-import { RegistrationUtil } from './utils/registration.util';
-import { DocumentUtil } from './utils/document.util';
-import { CacheModule } from '@nestjs/cache-manager';
-import { redisStore } from 'cache-manager-redis-store';
-import { DateUtil } from './utils/date.util';
-import { HttpModule } from '@nestjs/axios';
-import { UserPermissionGuard } from './guards/user-permission.guard';
-import { SecurityGuard } from './guards/security.guard';
+import { MailerModule } from "@nestjs-modules/mailer";
+import { Global, Module } from "@nestjs/common";
+import { ConfigModule } from "@nestjs/config";
+import { APP_GUARD } from "@nestjs/core";
+import { JwtModule, JwtService } from "@nestjs/jwt";
+import { PassportModule } from "@nestjs/passport";
+import { JwtStrategy } from "./config/jwt.strategy";
+import { GenerateCodeUtil } from "./utils/generete-code.util";
+import { HasherUtil } from "./utils/hasher.util";
+import { RSAUtil } from "./utils/rsa.util";
+import { RegistrationUtil } from "./utils/registration.util";
+import { DocumentUtil } from "./utils/document.util";
+import { CacheModule } from "@nestjs/cache-manager";
+import { redisStore } from "cache-manager-redis-store";
+import { DateUtil } from "./utils/date.util";
+import { HttpModule } from "@nestjs/axios";
+import { UserPermissionGuard } from "./guards/user-permission.guard";
+import { SecurityGuard } from "./guards/security.guard";
 
 const { MAIL_NAME, MAIL_FROM, MAIL_HOST, MAIL_USER, MAIL_PASS, MAIL_PORT } =
   process.env;
@@ -44,18 +44,17 @@ const { MAIL_NAME, MAIL_FROM, MAIL_HOST, MAIL_USER, MAIL_PASS, MAIL_PORT } =
     PassportModule,
     JwtModule.register({
       secret: `${process.env.JWT_SECRET_KEY}`,
-      signOptions: { expiresIn: '5mn' },
+      signOptions: { expiresIn: "5mn" },
     }),
     MailerModule.forRoot({
       transport: {
         host: MAIL_HOST,
-        port: Number(MAIL_PORT),
+        port: MAIL_PORT,
         auth: {
           user: MAIL_USER,
           pass: MAIL_PASS,
         },
       },
-      preview: true,
       defaults: {
         from: `"${MAIL_NAME}" <${MAIL_FROM}>`,
       },
@@ -73,27 +72,27 @@ const { MAIL_NAME, MAIL_FROM, MAIL_HOST, MAIL_USER, MAIL_PASS, MAIL_PORT } =
       useClass: UserPermissionGuard,
     },
     {
-      provide: 'GenerateCode',
+      provide: "GenerateCode",
       useClass: GenerateCodeUtil,
     },
     {
-      provide: 'Hasher',
+      provide: "Hasher",
       useClass: HasherUtil,
     },
     {
-      provide: 'RSA',
+      provide: "RSA",
       useClass: RSAUtil,
     },
     {
-      provide: 'Registration',
+      provide: "Registration",
       useClass: RegistrationUtil,
     },
     {
-      provide: 'Document',
+      provide: "Document",
       useClass: DocumentUtil,
     },
     {
-      provide: 'Date',
+      provide: "Date",
       useClass: DateUtil,
     },
   ],
@@ -101,27 +100,27 @@ const { MAIL_NAME, MAIL_FROM, MAIL_HOST, MAIL_USER, MAIL_PASS, MAIL_PORT } =
     JwtService,
     JwtStrategy,
     {
-      provide: 'GenerateCode',
+      provide: "GenerateCode",
       useClass: GenerateCodeUtil,
     },
     {
-      provide: 'Hasher',
+      provide: "Hasher",
       useClass: HasherUtil,
     },
     {
-      provide: 'RSA',
+      provide: "RSA",
       useClass: RSAUtil,
     },
     {
-      provide: 'Registration',
+      provide: "Registration",
       useClass: RegistrationUtil,
     },
     {
-      provide: 'Document',
+      provide: "Document",
       useClass: DocumentUtil,
     },
     {
-      provide: 'Date',
+      provide: "Date",
       useClass: DateUtil,
     },
   ],

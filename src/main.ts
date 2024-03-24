@@ -1,19 +1,19 @@
-import { Logger, ValidationPipe } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
-import { NestFactory, PartialGraphHost } from '@nestjs/core';
-import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import { useContainer } from 'class-validator';
-import * as compression from 'compression';
-import { writeFileSync } from 'fs';
-import helmet from 'helmet';
-import { AppModule } from './app.module';
-import { PrismaConnection } from './domain/connection/prisma.connection';
-import { LoggingInterceptor } from './infrastructure/interceptors/logging.interceptor';
+import { Logger, ValidationPipe } from "@nestjs/common";
+import { ConfigService } from "@nestjs/config";
+import { NestFactory, PartialGraphHost } from "@nestjs/core";
+import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
+import { useContainer } from "class-validator";
+import * as compression from "compression";
+import { writeFileSync } from "fs";
+import helmet from "helmet";
+import { AppModule } from "./app.module";
+import { PrismaConnection } from "./domain/connection/prisma.connection";
+import { LoggingInterceptor } from "./infrastructure/interceptors/logging.interceptor";
 
 const logger = new Logger(bootstrap.name);
 
 async function bootstrap() {
-  process.env.TZ = 'UTC';
+  process.env.TZ = "UTC";
   const app = await NestFactory.create(AppModule, {
     snapshot: true,
     forceCloseConnections: true,
@@ -30,13 +30,13 @@ async function bootstrap() {
   app.enableShutdownHooks();
 
   const config = new DocumentBuilder()
-    .setTitle('Clock-Wise Auth')
-    .setDescription('Authentication System')
-    .setVersion('1.0')
+    .setTitle("Clock-Wise Auth")
+    .setDescription("Authentication System")
+    .setVersion("1.0")
     .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('v1/doc', app, document);
+  SwaggerModule.setup("v1/doc", app, document);
 
   app.useGlobalInterceptors(new LoggingInterceptor());
   app.useGlobalPipes(
@@ -57,18 +57,39 @@ async function bootstrap() {
     process.kill(process.pid, signal);
   }
 
-  process.on('SIGINT', gracefulShutdown);
-  process.on('SIGTERM', gracefulShutdown);
+  process.on("SIGINT", gracefulShutdown);
+  process.on("SIGTERM", gracefulShutdown);
 
-  const PORT = configService.get('PORT') ?? 3000;
-  await app.listen(PORT, () => {});
+  const PORT = configService.get("PORT") ?? 3000;
+  await app.listen(PORT, () => {
+    logger.verbose(`
+    
+    //////////////////////////////
+    //////////////////////////////
+    //////////////////////////////
+    //////////%,,,,@,,,,%(////////
+    ///////%,,,,,..@..,,,,,%//////
+    //////%,,,.... @ ....,,,%/////
+    //////%,,,...  %@@@@@@,,%(////
+    //////%,,,....# .....,,,%(////
+    ///////%,,,,,.....,,,,*%(/////
+    /////////(%,,,,,,,,,%#(///////
+    /////////////(((((////////////
+    //////////////////////////////
+
+          ⌚ CLOCK WISE AUTH
+
+    ✅ Available at the port ${PORT}
+    🚀 Deploy to the ${process.env.NODE_ENV}
+    `);
+  });
 }
 
-bootstrap().catch((err) => {
+bootstrap().catch(err => {
   try {
-    writeFileSync('graph.json', PartialGraphHost.toString() ?? '');
+    writeFileSync("graph.json", PartialGraphHost.toString() ?? "");
   } catch (error) {
-    logger.error('Error when trying to write graph.json.');
+    logger.error("Error when trying to write graph.json.");
     logger.error(error);
   }
   logger.error(err);

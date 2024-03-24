@@ -1,15 +1,15 @@
-import { Inject, Injectable } from '@nestjs/common';
-import { PassportStrategy } from '@nestjs/passport';
-import { config } from 'dotenv';
-import { ExtractJwt, Strategy } from 'passport-jwt';
-import { JWTDecryptPayload } from '../types/request.types';
-import { RSAInterface } from '../utils/interfaces/rsa.interface';
+import { Inject, Injectable } from "@nestjs/common";
+import { PassportStrategy } from "@nestjs/passport";
+import { config } from "dotenv";
+import { ExtractJwt, Strategy } from "passport-jwt";
+import { JWTDecryptPayload } from "../types/request.types";
+import { RSAInterface } from "../utils/interfaces/rsa.interface";
 config();
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(
-    @Inject('RSA')
+    @Inject("RSA")
     private readonly rsa: RSAInterface,
   ) {
     super({

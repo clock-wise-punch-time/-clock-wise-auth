@@ -3,10 +3,10 @@ export type Guideline = {
   title: string;
   description: string;
   type:
-    | 'PRIVACY_POLICY'
-    | 'TERMS_OF_USE'
-    | 'LABOR_COMPLIANCE'
-    | 'COOKIE_POLICY';
+    | "PRIVACY_POLICY"
+    | "TERMS_OF_USE"
+    | "LABOR_COMPLIANCE"
+    | "COOKIE_POLICY";
   version: number;
   status: boolean;
   deleted: boolean;

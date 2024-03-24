@@ -1,14 +1,14 @@
-import { DocumentInterface } from './interfaces/document.util';
+import { DocumentInterface } from "./interfaces/document.util";
 
 export class DocumentUtil implements DocumentInterface {
   isCPF(cpf: string): boolean {
-    const cleanedCPF = cpf.replace(/\D/g, '');
+    const cleanedCPF = cpf.replace(/\D/g, "");
 
     if (cleanedCPF.length !== 11) {
       return false;
     }
 
-    const repeatedDigits = new RegExp('(\\d)\\1{10}');
+    const repeatedDigits = new RegExp("(\\d)\\1{10}");
     if (repeatedDigits.test(cleanedCPF)) {
       return false;
     }
