@@ -9,6 +9,7 @@ WORKDIR /app
 
 USER node
 COPY --chown=node:node package*.json .
+COPY --chown=node:node public ./public/
 COPY --chown=node:node prisma ./prisma/
 COPY --chown=node:node security ./security/
 
@@ -27,7 +28,7 @@ FROM node:20-alpine AS build
 WORKDIR /app
 
 COPY --chown=node:node package*.json ./
-
+COPY --chown=node:node public ./public/
 COPY --chown=node:node prisma ./prisma/
 COPY --chown=node:node security ./security/
 
@@ -35,6 +36,7 @@ COPY --chown=node:node --from=development /app/node_modules ./node_modules
 
 COPY --chown=node:node . .
 
+RUN npm i dotenv
 RUN npm run build
 
 ENV NODE_ENV production
@@ -53,6 +55,7 @@ COPY --chown=node:node --from=build /app/node_modules ./node_modules
 COPY --chown=node:node --from=build /app/dist ./dist
 COPY --chown=node:node --from=build /app/package*.json ./
 COPY --chown=node:node --from=build /app/prisma ./prisma
+COPY --chown=node:node --from=build /app/public ./public
 COPY --chown=node:node --from=build /app/security ./security
 
 CMD [ "npm", "run", "start:prod" ]

@@ -1,0 +1,3440 @@
+{
+  "nodes": {
+    "22804189": {
+      "id": "22804189",
+      "label": "ModuleRef",
+      "parent": "-68926109",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "RepositoryModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "90306700": {
+      "id": "90306700",
+      "label": "guideline_accepted",
+      "parent": "-68926109",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "RepositoryModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "guideline_accepted",
+        "initTime": 39.6536000000001
+      }
+    },
+    "95355232": {
+      "id": "95355232",
+      "label": "JwtModule",
+      "parent": "-536515674",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "JwtModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "JwtModule",
+        "initTime": 9.695299999999861
+      }
+    },
+    "203550704": {
+      "id": "203550704",
+      "label": "ExternalContextCreator",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "ExternalContextCreator",
+        "initTime": 11.967299999999796
+      }
+    },
+    "211572259": {
+      "id": "211572259",
+      "label": "ConfigHostModule",
+      "metadata": {
+        "type": "module",
+        "global": true,
+        "dynamic": false,
+        "internal": false
+      }
+    },
+    "225063248": {
+      "id": "225063248",
+      "label": "InternalCoreModule",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "InternalCoreModule",
+        "initTime": 12.895700000000033
+      }
+    },
+    "233936880": {
+      "id": "233936880",
+      "label": "AppController",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "controller",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "AppController"
+      }
+    },
+    "303302557": {
+      "id": "303302557",
+      "label": "ModuleRef",
+      "parent": "211572259",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ConfigHostModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "345719894": {
+      "id": "345719894",
+      "label": "CoreModule",
+      "parent": "-1125887048",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "CoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "CoreModule",
+        "initTime": 9.955999999999676
+      }
+    },
+    "367771592": {
+      "id": "367771592",
+      "label": "HasherUtil",
+      "parent": "-1125887048",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "CoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "Hasher",
+        "initTime": 10.925600000000031
+      }
+    },
+    "393641925": {
+      "id": "393641925",
+      "label": "JwtStrategy",
+      "parent": "-1125887048",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "CoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "JwtStrategy",
+        "initTime": 38.409799999999905
+      }
+    },
+    "410228892": {
+      "id": "410228892",
+      "label": "ApplicationConfig",
+      "parent": "-949539487",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "CacheModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "435222439": {
+      "id": "435222439",
+      "label": "ModuleRef",
+      "parent": "-949539487",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "CacheModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "484536027": {
+      "id": "484536027",
+      "label": "ModuleRef",
+      "parent": "2102434273",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "HttpModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "541828540": {
+      "id": "541828540",
+      "label": "MailerCoreModule",
+      "metadata": {
+        "type": "module",
+        "global": true,
+        "dynamic": true,
+        "internal": false
+      }
+    },
+    "555176277": {
+      "id": "555176277",
+      "label": "InternalCoreModule",
+      "metadata": {
+        "type": "module",
+        "global": true,
+        "dynamic": true,
+        "internal": true
+      }
+    },
+    "612373928": {
+      "id": "612373928",
+      "label": "GuidelineService",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "GuidelineService",
+        "initTime": 45.559400000000096
+      }
+    },
+    "633558838": {
+      "id": "633558838",
+      "label": "ModuleRef",
+      "parent": "541828540",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MailerCoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "649675233": {
+      "id": "649675233",
+      "label": "HttpService",
+      "parent": "2102434273",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "HttpModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "HttpService",
+        "initTime": 27.009399999999914
+      }
+    },
+    "671882984": {
+      "id": "671882984",
+      "label": "Reflector",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "Reflector",
+        "initTime": 12.647800000000188
+      }
+    },
+    "706572008": {
+      "id": "706572008",
+      "label": "r",
+      "parent": "-68926109",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "RepositoryModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "r",
+        "initTime": 9.764299999999821
+      }
+    },
+    "749988935": {
+      "id": "749988935",
+      "label": "SMTPProvider",
+      "parent": "-252494591",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "ProvidersModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "SMTP",
+        "initTime": 43.85619999999972
+      }
+    },
+    "755535049": {
+      "id": "755535049",
+      "label": "AuthController",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "controller",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "AuthController"
+      }
+    },
+    "826085184": {
+      "id": "826085184",
+      "label": "CacheModule",
+      "parent": "-949539487",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "CacheModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "CacheModule",
+        "initTime": 9.760499999999865
+      }
+    },
+    "915774976": {
+      "id": "915774976",
+      "label": "ApplicationConfig",
+      "parent": "1712628187",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ConfigModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "917906784": {
+      "id": "917906784",
+      "label": "ResetPasswordUseCase",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "ResetPasswordUseCase",
+        "initTime": 45.86969999999974
+      }
+    },
+    "930519593": {
+      "id": "930519593",
+      "label": "ConfigService",
+      "parent": "211572259",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "ConfigHostModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "Symbol(CONFIG_SERVICE)",
+        "initTime": 38.27760000000035
+      }
+    },
+    "1033121776": {
+      "id": "1033121776",
+      "label": "SecurityGuard",
+      "parent": "-1125887048",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "CoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "APP_GUARD (UUID: 1239237319)",
+        "subtype": "guard",
+        "initTime": 44.503099999999904
+      }
+    },
+    "1063746662": {
+      "id": "1063746662",
+      "label": "CONFIGURATION_TOKEN",
+      "parent": "211572259",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "ConfigHostModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "CONFIGURATION_TOKEN",
+        "initTime": 9.773699999999735
+      }
+    },
+    "1064117840": {
+      "id": "1064117840",
+      "label": "ApplicationConfig",
+      "parent": "-1959092373",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "PassportModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "1065348212": {
+      "id": "1065348212",
+      "label": "RefreshTokenUseCase",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "RefreshTokenUseCase"
+      }
+    },
+    "1066356322": {
+      "id": "1066356322",
+      "label": "GuidelineAccepetedService",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "GuidelineAccepetedService",
+        "initTime": 45.538400000000365
+      }
+    },
+    "1070370213": {
+      "id": "1070370213",
+      "label": "JwtService",
+      "parent": "-536515674",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "JwtModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "JwtService",
+        "initTime": 26.80639999999994
+      }
+    },
+    "1077675685": {
+      "id": "1077675685",
+      "label": "ErrorHttpFilter",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "APP_FILTER (UUID: -277730442)",
+        "subtype": "filter",
+        "initTime": 42.60219999999981
+      }
+    },
+    "1121830208": {
+      "id": "1121830208",
+      "label": "GoogleRecaptcha",
+      "parent": "-252494591",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "ProvidersModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "Recaptcha",
+        "initTime": 9.701700000000073
+      }
+    },
+    "1199367463": {
+      "id": "1199367463",
+      "label": "LoggingInterceptor",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "APP_INTERCEPTOR (UUID: 1780085433)",
+        "subtype": "interceptor",
+        "initTime": 11.381400000000212
+      }
+    },
+    "1224677830": {
+      "id": "1224677830",
+      "label": "RegistrationUtil",
+      "parent": "-1125887048",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "CoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "Registration",
+        "initTime": 10.330500000000029
+      }
+    },
+    "1355799252": {
+      "id": "1355799252",
+      "label": "PrismaConnection",
+      "parent": "-68926109",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "RepositoryModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "PrismaConnection",
+        "initTime": 9.764100000000326
+      }
+    },
+    "1357421246": {
+      "id": "1357421246",
+      "label": "CACHE_MANAGER",
+      "parent": "-949539487",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "CacheModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "CACHE_MANAGER"
+      }
+    },
+    "1423372864": {
+      "id": "1423372864",
+      "label": "ProvidersModule",
+      "parent": "-252494591",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ProvidersModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ProvidersModule",
+        "initTime": 9.719500000000153
+      }
+    },
+    "1434049090": {
+      "id": "1434049090",
+      "label": "ErrorBuilderFilter",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "APP_FILTER (UUID: -610979416)",
+        "subtype": "filter",
+        "initTime": 42.566299999999956
+      }
+    },
+    "1434456218": {
+      "id": "1434456218",
+      "label": "Reflector",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": true,
+        "token": "Reflector",
+        "initTime": 41.06449999999995
+      }
+    },
+    "1442935193": {
+      "id": "1442935193",
+      "label": "JwtService",
+      "parent": "-1125887048",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "CoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "JwtService",
+        "initTime": 42.20289999999977
+      }
+    },
+    "1551182002": {
+      "id": "1551182002",
+      "label": "ModuleRef",
+      "parent": "-1125887048",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "CoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "1590849531": {
+      "id": "1590849531",
+      "label": "DateUtil",
+      "parent": "-1125887048",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "CoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "Date",
+        "initTime": 10.483999999999924
+      }
+    },
+    "1601525074": {
+      "id": "1601525074",
+      "label": "ConfirmEmailUseCase",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "ConfirmEmailUseCase",
+        "initTime": 45.763600000000224
+      }
+    },
+    "1609888104": {
+      "id": "1609888104",
+      "label": "HttpModule",
+      "parent": "2102434273",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "HttpModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "HttpModule",
+        "initTime": 9.873599999999897
+      }
+    },
+    "1630166563": {
+      "id": "1630166563",
+      "label": "HttpErrorHandler",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "APP_INTERCEPTOR (UUID: 1780085434)",
+        "subtype": "interceptor",
+        "initTime": 11.29950000000008
+      }
+    },
+    "1690574933": {
+      "id": "1690574933",
+      "label": "ModuleRef",
+      "parent": "1712628187",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ConfigModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "1712628187": {
+      "id": "1712628187",
+      "label": "ConfigModule",
+      "metadata": {
+        "type": "module",
+        "global": true,
+        "dynamic": true,
+        "internal": false
+      }
+    },
+    "1712941473": {
+      "id": "1712941473",
+      "label": "ApplicationConfig",
+      "parent": "-536515674",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "JwtModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "1725362405": {
+      "id": "1725362405",
+      "label": "CodeService",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "CodeService",
+        "initTime": 45.62780000000021
+      }
+    },
+    "1769319388": {
+      "id": "1769319388",
+      "label": "ConfigModule",
+      "parent": "1712628187",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ConfigModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ConfigModule",
+        "initTime": 9.843000000000302
+      }
+    },
+    "1787828844": {
+      "id": "1787828844",
+      "label": "ConfigHostModule",
+      "parent": "211572259",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ConfigHostModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ConfigHostModule",
+        "initTime": 9.77769999999964
+      }
+    },
+    "1823014432": {
+      "id": "1823014432",
+      "label": "MailerService",
+      "parent": "541828540",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "MailerCoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "MailerService",
+        "initTime": 33.57180000000017
+      }
+    },
+    "1838196488": {
+      "id": "1838196488",
+      "label": "ApplicationConfig",
+      "parent": "-68926109",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "RepositoryModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "1919157847": {
+      "id": "1919157847",
+      "label": "REQUEST",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": false,
+        "scope": 2,
+        "transient": false,
+        "exported": true,
+        "token": "REQUEST",
+        "initTime": 4.94419999999991
+      }
+    },
+    "1981834777": {
+      "id": "1981834777",
+      "label": "FingerprintProvider",
+      "parent": "-252494591",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "ProvidersModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "Fingerprint",
+        "initTime": 9.714699999999993
+      }
+    },
+    "2102434273": {
+      "id": "2102434273",
+      "label": "HttpModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": true,
+        "internal": false
+      }
+    },
+    "2113661142": {
+      "id": "2113661142",
+      "label": "RefreshTokenService",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "RefreshTokenService"
+      }
+    },
+    "2118694856": {
+      "id": "2118694856",
+      "label": "ApplicationConfig",
+      "parent": "211572259",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ConfigHostModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "-1486320561": {
+      "id": "-1486320561",
+      "label": "ModuleRef",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-651043398": {
+      "id": "-651043398",
+      "label": "ApplicationConfig",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "-255469305": {
+      "id": "-255469305",
+      "label": "INQUIRER",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 1,
+        "transient": true,
+        "exported": true,
+        "token": "INQUIRER",
+        "initTime": 4.93560000000025
+      }
+    },
+    "-26938366": {
+      "id": "-26938366",
+      "label": "ModulesContainer",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "ModulesContainer",
+        "initTime": 11.950200000000223
+      }
+    },
+    "-326832201": {
+      "id": "-326832201",
+      "label": "HttpAdapterHost",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "HttpAdapterHost",
+        "initTime": 11.930499999999938
+      }
+    },
+    "-702581189": {
+      "id": "-702581189",
+      "label": "LazyModuleLoader",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "LazyModuleLoader",
+        "initTime": 11.926100000000133
+      }
+    },
+    "-1904419534": {
+      "id": "-1904419534",
+      "label": "SerializedGraph",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "SerializedGraph",
+        "initTime": 11.920000000000073
+      }
+    },
+    "-19112576": {
+      "id": "-19112576",
+      "label": "AppModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": false,
+        "internal": false
+      }
+    },
+    "-2139588960": {
+      "id": "-2139588960",
+      "label": "AppModule",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "AppModule",
+        "initTime": 11.910800000000108
+      }
+    },
+    "-71302842": {
+      "id": "-71302842",
+      "label": "ModuleRef",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-2064622725": {
+      "id": "-2064622725",
+      "label": "ApplicationConfig",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "-1399067790": {
+      "id": "-1399067790",
+      "label": "ClassSerializerInterceptor",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "APP_INTERCEPTOR (UUID: -1146749753)",
+        "subtype": "interceptor",
+        "initTime": 46.38750000000027
+      }
+    },
+    "-1005342013": {
+      "id": "-1005342013",
+      "label": "UserService",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "UserService",
+        "initTime": 45.68399999999974
+      }
+    },
+    "-1453136050": {
+      "id": "-1453136050",
+      "label": "DeviceService",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "DeviceService",
+        "initTime": 45.58309999999983
+      }
+    },
+    "-306594308": {
+      "id": "-306594308",
+      "label": "IpBlocklistService",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "IpBlocklistService"
+      }
+    },
+    "-183248449": {
+      "id": "-183248449",
+      "label": "LoginUseCase",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "LoginUseCase"
+      }
+    },
+    "-1059768007": {
+      "id": "-1059768007",
+      "label": "RegisterUseCase",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "RegisterUseCase"
+      }
+    },
+    "-1320694924": {
+      "id": "-1320694924",
+      "label": "ForgotPasswordUseCase",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "ForgotPasswordUseCase",
+        "initTime": 46.38099999999986
+      }
+    },
+    "-2015910365": {
+      "id": "-2015910365",
+      "label": "ResetEmailUseCase",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "ResetEmailUseCase",
+        "initTime": 45.83249999999998
+      }
+    },
+    "-1899170862": {
+      "id": "-1899170862",
+      "label": "RequestResetEmailUseCase",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "RequestResetEmailUseCase",
+        "initTime": 46.26209999999992
+      }
+    },
+    "-1125887048": {
+      "id": "-1125887048",
+      "label": "CoreModule",
+      "metadata": {
+        "type": "module",
+        "global": true,
+        "dynamic": false,
+        "internal": false
+      }
+    },
+    "-112192227": {
+      "id": "-112192227",
+      "label": "ApplicationConfig",
+      "parent": "-1125887048",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "CoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "-2079365130": {
+      "id": "-2079365130",
+      "label": "UserPermissionGuard",
+      "parent": "-1125887048",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "CoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "APP_GUARD (UUID: 1201125561)",
+        "subtype": "guard",
+        "initTime": 41.43989999999985
+      }
+    },
+    "-368184753": {
+      "id": "-368184753",
+      "label": "GenerateCodeUtil",
+      "parent": "-1125887048",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "CoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "GenerateCode",
+        "initTime": 10.89830000000029
+      }
+    },
+    "-1217015091": {
+      "id": "-1217015091",
+      "label": "RSAUtil",
+      "parent": "-1125887048",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "CoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "RSA",
+        "initTime": 10.735400000000027
+      }
+    },
+    "-611074392": {
+      "id": "-611074392",
+      "label": "DocumentUtil",
+      "parent": "-1125887048",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "CoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "Document",
+        "initTime": 9.881000000000313
+      }
+    },
+    "-1178838202": {
+      "id": "-1178838202",
+      "label": "ApplicationConfig",
+      "parent": "2102434273",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "HttpModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "-338250594": {
+      "id": "-338250594",
+      "label": "AXIOS_INSTANCE_TOKEN",
+      "parent": "2102434273",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "HttpModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "AXIOS_INSTANCE_TOKEN"
+      }
+    },
+    "-1940673205": {
+      "id": "-1940673205",
+      "label": "HTTP_MODULE_ID",
+      "parent": "2102434273",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "HttpModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "HTTP_MODULE_ID"
+      }
+    },
+    "-503631789": {
+      "id": "-503631789",
+      "label": "ConfigService",
+      "parent": "1712628187",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "ConfigModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "ConfigService",
+        "initTime": 44.27230000000009
+      }
+    },
+    "-949539487": {
+      "id": "-949539487",
+      "label": "CacheModule",
+      "metadata": {
+        "type": "module",
+        "global": true,
+        "dynamic": true,
+        "internal": false
+      }
+    },
+    "-695472180": {
+      "id": "-695472180",
+      "label": "Cache",
+      "parent": "-949539487",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "CacheModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": true,
+        "token": "Cache"
+      }
+    },
+    "-1871582906": {
+      "id": "-1871582906",
+      "label": "CACHE_MODULE_OPTIONS",
+      "parent": "-949539487",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "CacheModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "CACHE_MODULE_OPTIONS"
+      }
+    },
+    "-1959092373": {
+      "id": "-1959092373",
+      "label": "PassportModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": false,
+        "internal": false
+      }
+    },
+    "-1891293700": {
+      "id": "-1891293700",
+      "label": "PassportModule",
+      "parent": "-1959092373",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "PassportModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "PassportModule",
+        "initTime": 9.701499999999669
+      }
+    },
+    "-1677432987": {
+      "id": "-1677432987",
+      "label": "ModuleRef",
+      "parent": "-1959092373",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "PassportModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-536515674": {
+      "id": "-536515674",
+      "label": "JwtModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": true,
+        "internal": false
+      }
+    },
+    "-588705940": {
+      "id": "-588705940",
+      "label": "ModuleRef",
+      "parent": "-536515674",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "JwtModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-1900804336": {
+      "id": "-1900804336",
+      "label": "JWT_MODULE_OPTIONS",
+      "parent": "-536515674",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "JwtModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "JWT_MODULE_OPTIONS"
+      }
+    },
+    "-384922179": {
+      "id": "-384922179",
+      "label": "MailerModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": true,
+        "internal": false
+      }
+    },
+    "-1735606112": {
+      "id": "-1735606112",
+      "label": "MailerModule",
+      "parent": "-384922179",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MailerModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "MailerModule",
+        "initTime": 9.67529999999988
+      }
+    },
+    "-406975433": {
+      "id": "-406975433",
+      "label": "ModuleRef",
+      "parent": "-384922179",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MailerModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-1181775390": {
+      "id": "-1181775390",
+      "label": "ApplicationConfig",
+      "parent": "-384922179",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MailerModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "-185178210": {
+      "id": "-185178210",
+      "label": "MailerCoreModule",
+      "parent": "541828540",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MailerCoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "MailerCoreModule",
+        "initTime": 9.66989999999987
+      }
+    },
+    "-1846016159": {
+      "id": "-1846016159",
+      "label": "ApplicationConfig",
+      "parent": "541828540",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MailerCoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "-1058138446": {
+      "id": "-1058138446",
+      "label": "MAILER_OPTIONS",
+      "parent": "541828540",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "MailerCoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "MAILER_OPTIONS"
+      }
+    },
+    "-68926109": {
+      "id": "-68926109",
+      "label": "RepositoryModule",
+      "metadata": {
+        "type": "module",
+        "global": true,
+        "dynamic": false,
+        "internal": false
+      }
+    },
+    "-1680246548": {
+      "id": "-1680246548",
+      "label": "RepositoryModule",
+      "parent": "-68926109",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "RepositoryModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "RepositoryModule",
+        "initTime": 9.645399999999881
+      }
+    },
+    "-131299263": {
+      "id": "-131299263",
+      "label": "user",
+      "parent": "-68926109",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "RepositoryModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "user",
+        "initTime": 39.672399999999925
+      }
+    },
+    "-362299546": {
+      "id": "-362299546",
+      "label": "guideline",
+      "parent": "-68926109",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "RepositoryModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "guideline",
+        "initTime": 39.66219999999976
+      }
+    },
+    "-1174911796": {
+      "id": "-1174911796",
+      "label": "device",
+      "parent": "-68926109",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "RepositoryModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "device",
+        "initTime": 39.644900000000234
+      }
+    },
+    "-1695562141": {
+      "id": "-1695562141",
+      "label": "code",
+      "parent": "-68926109",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "RepositoryModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "code",
+        "initTime": 39.63599999999997
+      }
+    },
+    "-205611326": {
+      "id": "-205611326",
+      "label": "CacheRepository",
+      "parent": "-68926109",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "RepositoryModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "Cache"
+      }
+    },
+    "-252494591": {
+      "id": "-252494591",
+      "label": "ProvidersModule",
+      "metadata": {
+        "type": "module",
+        "global": true,
+        "dynamic": false,
+        "internal": false
+      }
+    },
+    "-110988217": {
+      "id": "-110988217",
+      "label": "ModuleRef",
+      "parent": "-252494591",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ProvidersModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-1022258500": {
+      "id": "-1022258500",
+      "label": "ApplicationConfig",
+      "parent": "-252494591",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ProvidersModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    }
+  },
+  "edges": {
+    "81314991": {
+      "source": "-1125887048",
+      "target": "-1959092373",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "CoreModule",
+        "targetModuleName": "PassportModule"
+      },
+      "id": "81314991"
+    },
+    "100361780": {
+      "source": "-536515674",
+      "target": "-68926109",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "JwtModule",
+        "targetModuleName": "RepositoryModule"
+      },
+      "id": "100361780"
+    },
+    "174694499": {
+      "source": "90306700",
+      "target": "706572008",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "RepositoryModule",
+        "sourceClassName": "guideline_accepted",
+        "targetClassName": "r",
+        "sourceClassToken": "guideline_accepted",
+        "targetClassToken": "r",
+        "targetModuleName": "RepositoryModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "174694499"
+    },
+    "185446636": {
+      "source": "-1959092373",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "PassportModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "185446636"
+    },
+    "187799515": {
+      "source": "541828540",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MailerCoreModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "187799515"
+    },
+    "189694679": {
+      "source": "1434456218",
+      "target": "671882984",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "InternalCoreModule",
+        "sourceClassName": "Reflector",
+        "targetClassName": "Reflector",
+        "sourceClassToken": "Reflector",
+        "targetClassToken": "Reflector",
+        "targetModuleName": "InternalCoreModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor",
+        "internal": true
+      },
+      "id": "189694679"
+    },
+    "319045316": {
+      "source": "-384922179",
+      "target": "-68926109",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MailerModule",
+        "targetModuleName": "RepositoryModule"
+      },
+      "id": "319045316"
+    },
+    "353572985": {
+      "source": "1712628187",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "353572985"
+    },
+    "374581302": {
+      "source": "-1125887048",
+      "target": "-252494591",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "CoreModule",
+        "targetModuleName": "ProvidersModule"
+      },
+      "id": "374581302"
+    },
+    "396327704": {
+      "source": "211572259",
+      "target": "541828540",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigHostModule",
+        "targetModuleName": "MailerCoreModule"
+      },
+      "id": "396327704"
+    },
+    "400442656": {
+      "source": "-536515674",
+      "target": "-1125887048",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "JwtModule",
+        "targetModuleName": "CoreModule"
+      },
+      "id": "400442656"
+    },
+    "459421903": {
+      "source": "1712628187",
+      "target": "-1125887048",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigModule",
+        "targetModuleName": "CoreModule"
+      },
+      "id": "459421903"
+    },
+    "584653416": {
+      "source": "1712628187",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "584653416"
+    },
+    "591988327": {
+      "source": "-2015910365",
+      "target": "1590849531",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "ResetEmailUseCase",
+        "targetClassName": "DateUtil",
+        "sourceClassToken": "ResetEmailUseCase",
+        "targetClassToken": "Date",
+        "targetModuleName": "CoreModule",
+        "keyOrIndex": 2,
+        "injectionType": "constructor"
+      },
+      "id": "591988327"
+    },
+    "651473182": {
+      "source": "541828540",
+      "target": "-68926109",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MailerCoreModule",
+        "targetModuleName": "RepositoryModule"
+      },
+      "id": "651473182"
+    },
+    "675513665": {
+      "source": "541828540",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MailerCoreModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "675513665"
+    },
+    "676894922": {
+      "source": "-252494591",
+      "target": "-1125887048",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ProvidersModule",
+        "targetModuleName": "CoreModule"
+      },
+      "id": "676894922"
+    },
+    "743645971": {
+      "source": "-949539487",
+      "target": "-252494591",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "CacheModule",
+        "targetModuleName": "ProvidersModule"
+      },
+      "id": "743645971"
+    },
+    "784525888": {
+      "source": "-536515674",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "JwtModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "784525888"
+    },
+    "804987620": {
+      "source": "-19112576",
+      "target": "-1125887048",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "CoreModule"
+      },
+      "id": "804987620"
+    },
+    "817582348": {
+      "source": "-68926109",
+      "target": "541828540",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "RepositoryModule",
+        "targetModuleName": "MailerCoreModule"
+      },
+      "id": "817582348"
+    },
+    "886312458": {
+      "source": "1725362405",
+      "target": "-1695562141",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "CodeService",
+        "targetClassName": "code",
+        "sourceClassToken": "CodeService",
+        "targetClassToken": "code",
+        "targetModuleName": "RepositoryModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "886312458"
+    },
+    "965632672": {
+      "source": "1712628187",
+      "target": "-949539487",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigModule",
+        "targetModuleName": "CacheModule"
+      },
+      "id": "965632672"
+    },
+    "1056428433": {
+      "source": "-19112576",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "1056428433"
+    },
+    "1061792663": {
+      "source": "-1959092373",
+      "target": "541828540",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "PassportModule",
+        "targetModuleName": "MailerCoreModule"
+      },
+      "id": "1061792663"
+    },
+    "1071409108": {
+      "source": "211572259",
+      "target": "-1125887048",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigHostModule",
+        "targetModuleName": "CoreModule"
+      },
+      "id": "1071409108"
+    },
+    "1129695379": {
+      "source": "1712628187",
+      "target": "541828540",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigModule",
+        "targetModuleName": "MailerCoreModule"
+      },
+      "id": "1129695379"
+    },
+    "1134336077": {
+      "source": "-536515674",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "JwtModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "1134336077"
+    },
+    "1135137062": {
+      "source": "1066356322",
+      "target": "90306700",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "GuidelineAccepetedService",
+        "targetClassName": "guideline_accepted",
+        "sourceClassToken": "GuidelineAccepetedService",
+        "targetClassToken": "guideline_accepted",
+        "targetModuleName": "RepositoryModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "1135137062"
+    },
+    "1149914772": {
+      "source": "-536515674",
+      "target": "541828540",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "JwtModule",
+        "targetModuleName": "MailerCoreModule"
+      },
+      "id": "1149914772"
+    },
+    "1175183130": {
+      "source": "1070370213",
+      "target": "-1900804336",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "JwtModule",
+        "sourceClassName": "JwtService",
+        "targetClassName": "JWT_MODULE_OPTIONS",
+        "sourceClassToken": "JwtService",
+        "targetClassToken": "JWT_MODULE_OPTIONS",
+        "targetModuleName": "JwtModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "1175183130"
+    },
+    "1178621493": {
+      "source": "211572259",
+      "target": "-949539487",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigHostModule",
+        "targetModuleName": "CacheModule"
+      },
+      "id": "1178621493"
+    },
+    "1216053232": {
+      "source": "917906784",
+      "target": "1590849531",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "ResetPasswordUseCase",
+        "targetClassName": "DateUtil",
+        "sourceClassToken": "ResetPasswordUseCase",
+        "targetClassToken": "Date",
+        "targetModuleName": "CoreModule",
+        "keyOrIndex": 2,
+        "injectionType": "constructor"
+      },
+      "id": "1216053232"
+    },
+    "1232309059": {
+      "source": "917906784",
+      "target": "367771592",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "ResetPasswordUseCase",
+        "targetClassName": "HasherUtil",
+        "sourceClassToken": "ResetPasswordUseCase",
+        "targetClassToken": "Hasher",
+        "targetModuleName": "CoreModule",
+        "keyOrIndex": 3,
+        "injectionType": "constructor"
+      },
+      "id": "1232309059"
+    },
+    "1335886450": {
+      "source": "-68926109",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "RepositoryModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "1335886450"
+    },
+    "1402983767": {
+      "source": "-1695562141",
+      "target": "706572008",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "RepositoryModule",
+        "sourceClassName": "code",
+        "targetClassName": "r",
+        "sourceClassToken": "code",
+        "targetClassToken": "r",
+        "targetModuleName": "RepositoryModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "1402983767"
+    },
+    "1414936007": {
+      "source": "-536515674",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "JwtModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "1414936007"
+    },
+    "1444629132": {
+      "source": "211572259",
+      "target": "-252494591",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigHostModule",
+        "targetModuleName": "ProvidersModule"
+      },
+      "id": "1444629132"
+    },
+    "1475920902": {
+      "source": "-503631789",
+      "target": "930519593",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "ConfigModule",
+        "sourceClassName": "ConfigService",
+        "targetClassName": "ConfigService",
+        "sourceClassToken": "ConfigService",
+        "targetClassToken": "Symbol(CONFIG_SERVICE)",
+        "targetModuleName": "ConfigHostModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "1475920902"
+    },
+    "1555020528": {
+      "source": "-949539487",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "CacheModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "1555020528"
+    },
+    "1640241976": {
+      "source": "1601525074",
+      "target": "1590849531",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "ConfirmEmailUseCase",
+        "targetClassName": "DateUtil",
+        "sourceClassToken": "ConfirmEmailUseCase",
+        "targetClassToken": "Date",
+        "targetModuleName": "CoreModule",
+        "keyOrIndex": 2,
+        "injectionType": "constructor"
+      },
+      "id": "1640241976"
+    },
+    "1721304946": {
+      "source": "-1320694924",
+      "target": "1725362405",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "ForgotPasswordUseCase",
+        "targetClassName": "CodeService",
+        "sourceClassToken": "ForgotPasswordUseCase",
+        "targetClassToken": "CodeService",
+        "targetModuleName": "AppModule",
+        "keyOrIndex": 4,
+        "injectionType": "constructor"
+      },
+      "id": "1721304946"
+    },
+    "1751363434": {
+      "source": "-252494591",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ProvidersModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "1751363434"
+    },
+    "1755247519": {
+      "source": "-1125887048",
+      "target": "-949539487",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "CoreModule",
+        "targetModuleName": "CacheModule"
+      },
+      "id": "1755247519"
+    },
+    "1761542026": {
+      "source": "211572259",
+      "target": "-68926109",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigHostModule",
+        "targetModuleName": "RepositoryModule"
+      },
+      "id": "1761542026"
+    },
+    "1799688261": {
+      "source": "1033121776",
+      "target": "671882984",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "CoreModule",
+        "sourceClassName": "SecurityGuard",
+        "targetClassName": "Reflector",
+        "sourceClassToken": "APP_GUARD (UUID: 1239237319)",
+        "targetClassToken": "Reflector",
+        "targetModuleName": "InternalCoreModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor",
+        "internal": true
+      },
+      "id": "1799688261"
+    },
+    "1802474497": {
+      "source": "-949539487",
+      "target": "-1125887048",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "CacheModule",
+        "targetModuleName": "CoreModule"
+      },
+      "id": "1802474497"
+    },
+    "1803242241": {
+      "source": "1601525074",
+      "target": "1725362405",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "ConfirmEmailUseCase",
+        "targetClassName": "CodeService",
+        "sourceClassToken": "ConfirmEmailUseCase",
+        "targetClassToken": "CodeService",
+        "targetModuleName": "AppModule",
+        "keyOrIndex": 1,
+        "injectionType": "constructor"
+      },
+      "id": "1803242241"
+    },
+    "1821338376": {
+      "source": "-2015910365",
+      "target": "-1005342013",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "ResetEmailUseCase",
+        "targetClassName": "UserService",
+        "sourceClassToken": "ResetEmailUseCase",
+        "targetClassToken": "UserService",
+        "targetModuleName": "AppModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "1821338376"
+    },
+    "1826601877": {
+      "source": "-949539487",
+      "target": "-68926109",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "CacheModule",
+        "targetModuleName": "RepositoryModule"
+      },
+      "id": "1826601877"
+    },
+    "1879962718": {
+      "source": "-252494591",
+      "target": "-68926109",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ProvidersModule",
+        "targetModuleName": "RepositoryModule"
+      },
+      "id": "1879962718"
+    },
+    "1885167763": {
+      "source": "-252494591",
+      "target": "-949539487",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ProvidersModule",
+        "targetModuleName": "CacheModule"
+      },
+      "id": "1885167763"
+    },
+    "1953007560": {
+      "source": "-68926109",
+      "target": "-1125887048",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "RepositoryModule",
+        "targetModuleName": "CoreModule"
+      },
+      "id": "1953007560"
+    },
+    "2012317451": {
+      "source": "917906784",
+      "target": "-1005342013",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "ResetPasswordUseCase",
+        "targetClassName": "UserService",
+        "sourceClassToken": "ResetPasswordUseCase",
+        "targetClassToken": "UserService",
+        "targetModuleName": "AppModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "2012317451"
+    },
+    "2033216084": {
+      "source": "-1899170862",
+      "target": "749988935",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "RequestResetEmailUseCase",
+        "targetClassName": "SMTPProvider",
+        "sourceClassToken": "RequestResetEmailUseCase",
+        "targetClassToken": "SMTP",
+        "targetModuleName": "ProvidersModule",
+        "keyOrIndex": 2,
+        "injectionType": "constructor"
+      },
+      "id": "2033216084"
+    },
+    "2033408581": {
+      "source": "-2079365130",
+      "target": "671882984",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "CoreModule",
+        "sourceClassName": "UserPermissionGuard",
+        "targetClassName": "Reflector",
+        "sourceClassToken": "APP_GUARD (UUID: 1201125561)",
+        "targetClassToken": "Reflector",
+        "targetModuleName": "InternalCoreModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor",
+        "internal": true
+      },
+      "id": "2033408581"
+    },
+    "2072729896": {
+      "source": "541828540",
+      "target": "-1125887048",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MailerCoreModule",
+        "targetModuleName": "CoreModule"
+      },
+      "id": "2072729896"
+    },
+    "2094389911": {
+      "source": "-1320694924",
+      "target": "1121830208",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "ForgotPasswordUseCase",
+        "targetClassName": "GoogleRecaptcha",
+        "sourceClassToken": "ForgotPasswordUseCase",
+        "targetClassToken": "Recaptcha",
+        "targetModuleName": "ProvidersModule",
+        "keyOrIndex": 2,
+        "injectionType": "constructor"
+      },
+      "id": "2094389911"
+    },
+    "2100140299": {
+      "source": "-19112576",
+      "target": "-949539487",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "CacheModule"
+      },
+      "id": "2100140299"
+    },
+    "-1047751047": {
+      "source": "649675233",
+      "target": "-338250594",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "HttpModule",
+        "sourceClassName": "HttpService",
+        "targetClassName": "AXIOS_INSTANCE_TOKEN",
+        "sourceClassToken": "HttpService",
+        "targetClassToken": "AXIOS_INSTANCE_TOKEN",
+        "targetModuleName": "HttpModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-1047751047"
+    },
+    "-659403571": {
+      "source": "1823014432",
+      "target": "-1058138446",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "MailerCoreModule",
+        "sourceClassName": "MailerService",
+        "targetClassName": "MAILER_OPTIONS",
+        "sourceClassToken": "MailerService",
+        "targetClassToken": "MAILER_OPTIONS",
+        "targetModuleName": "MailerCoreModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-659403571"
+    },
+    "-1836389119": {
+      "source": "393641925",
+      "target": "-1217015091",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "CoreModule",
+        "sourceClassName": "JwtStrategy",
+        "targetClassName": "RSAUtil",
+        "sourceClassToken": "JwtStrategy",
+        "targetClassToken": "RSA",
+        "targetModuleName": "CoreModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-1836389119"
+    },
+    "-951393523": {
+      "source": "930519593",
+      "target": "1063746662",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "ConfigHostModule",
+        "sourceClassName": "ConfigService",
+        "targetClassName": "CONFIGURATION_TOKEN",
+        "sourceClassToken": "Symbol(CONFIG_SERVICE)",
+        "targetClassToken": "CONFIGURATION_TOKEN",
+        "targetModuleName": "ConfigHostModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-951393523"
+    },
+    "-140817161": {
+      "source": "-131299263",
+      "target": "706572008",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "RepositoryModule",
+        "sourceClassName": "user",
+        "targetClassName": "r",
+        "sourceClassToken": "user",
+        "targetClassToken": "r",
+        "targetModuleName": "RepositoryModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-140817161"
+    },
+    "-1469489447": {
+      "source": "-362299546",
+      "target": "706572008",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "RepositoryModule",
+        "sourceClassName": "guideline",
+        "targetClassName": "r",
+        "sourceClassToken": "guideline",
+        "targetClassToken": "r",
+        "targetModuleName": "RepositoryModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-1469489447"
+    },
+    "-329231005": {
+      "source": "-1174911796",
+      "target": "706572008",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "RepositoryModule",
+        "sourceClassName": "device",
+        "targetClassName": "r",
+        "sourceClassToken": "device",
+        "targetClassToken": "r",
+        "targetModuleName": "RepositoryModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-329231005"
+    },
+    "-1495887141": {
+      "source": "1077675685",
+      "target": "-326832201",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "ErrorHttpFilter",
+        "targetClassName": "HttpAdapterHost",
+        "sourceClassToken": "APP_FILTER (UUID: -277730442)",
+        "targetClassToken": "HttpAdapterHost",
+        "targetModuleName": "InternalCoreModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor",
+        "internal": true
+      },
+      "id": "-1495887141"
+    },
+    "-1940500257": {
+      "source": "1434049090",
+      "target": "-326832201",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "ErrorBuilderFilter",
+        "targetClassName": "HttpAdapterHost",
+        "sourceClassToken": "APP_FILTER (UUID: -610979416)",
+        "targetClassToken": "HttpAdapterHost",
+        "targetModuleName": "InternalCoreModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor",
+        "internal": true
+      },
+      "id": "-1940500257"
+    },
+    "-960992508": {
+      "source": "749988935",
+      "target": "1823014432",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "ProvidersModule",
+        "sourceClassName": "SMTPProvider",
+        "targetClassName": "MailerService",
+        "sourceClassToken": "SMTP",
+        "targetClassToken": "MailerService",
+        "targetModuleName": "MailerCoreModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-960992508"
+    },
+    "-518086495": {
+      "source": "-1399067790",
+      "target": "1434456218",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "ClassSerializerInterceptor",
+        "targetClassName": "Reflector",
+        "sourceClassToken": "APP_INTERCEPTOR (UUID: -1146749753)",
+        "targetClassToken": "Reflector",
+        "targetModuleName": "InternalCoreModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor",
+        "internal": true
+      },
+      "id": "-518086495"
+    },
+    "-2057581729": {
+      "source": "-1005342013",
+      "target": "-131299263",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "UserService",
+        "targetClassName": "user",
+        "sourceClassToken": "UserService",
+        "targetClassToken": "user",
+        "targetModuleName": "RepositoryModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-2057581729"
+    },
+    "-91551527": {
+      "source": "612373928",
+      "target": "-362299546",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "GuidelineService",
+        "targetClassName": "guideline",
+        "sourceClassToken": "GuidelineService",
+        "targetClassToken": "guideline",
+        "targetModuleName": "RepositoryModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-91551527"
+    },
+    "-1889349827": {
+      "source": "-1453136050",
+      "target": "-1174911796",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "DeviceService",
+        "targetClassName": "device",
+        "sourceClassToken": "DeviceService",
+        "targetClassToken": "device",
+        "targetModuleName": "RepositoryModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-1889349827"
+    },
+    "-994367947": {
+      "source": "917906784",
+      "target": "1725362405",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "ResetPasswordUseCase",
+        "targetClassName": "CodeService",
+        "sourceClassToken": "ResetPasswordUseCase",
+        "targetClassToken": "CodeService",
+        "targetModuleName": "AppModule",
+        "keyOrIndex": 1,
+        "injectionType": "constructor"
+      },
+      "id": "-994367947"
+    },
+    "-1621990480": {
+      "source": "-2015910365",
+      "target": "1725362405",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "ResetEmailUseCase",
+        "targetClassName": "CodeService",
+        "sourceClassToken": "ResetEmailUseCase",
+        "targetClassToken": "CodeService",
+        "targetModuleName": "AppModule",
+        "keyOrIndex": 1,
+        "injectionType": "constructor"
+      },
+      "id": "-1621990480"
+    },
+    "-582274667": {
+      "source": "1601525074",
+      "target": "-1005342013",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "ConfirmEmailUseCase",
+        "targetClassName": "UserService",
+        "sourceClassToken": "ConfirmEmailUseCase",
+        "targetClassToken": "UserService",
+        "targetModuleName": "AppModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-582274667"
+    },
+    "-812796501": {
+      "source": "-1320694924",
+      "target": "-1005342013",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "ForgotPasswordUseCase",
+        "targetClassName": "UserService",
+        "sourceClassToken": "ForgotPasswordUseCase",
+        "targetClassToken": "UserService",
+        "targetModuleName": "AppModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-812796501"
+    },
+    "-810302760": {
+      "source": "-1320694924",
+      "target": "749988935",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "ForgotPasswordUseCase",
+        "targetClassName": "SMTPProvider",
+        "sourceClassToken": "ForgotPasswordUseCase",
+        "targetClassToken": "SMTP",
+        "targetModuleName": "ProvidersModule",
+        "keyOrIndex": 1,
+        "injectionType": "constructor"
+      },
+      "id": "-810302760"
+    },
+    "-1941583154": {
+      "source": "-1320694924",
+      "target": "-368184753",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "ForgotPasswordUseCase",
+        "targetClassName": "GenerateCodeUtil",
+        "sourceClassToken": "ForgotPasswordUseCase",
+        "targetClassToken": "GenerateCode",
+        "targetModuleName": "CoreModule",
+        "keyOrIndex": 3,
+        "injectionType": "constructor"
+      },
+      "id": "-1941583154"
+    },
+    "-2044491288": {
+      "source": "-1899170862",
+      "target": "-1005342013",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "RequestResetEmailUseCase",
+        "targetClassName": "UserService",
+        "sourceClassToken": "RequestResetEmailUseCase",
+        "targetClassToken": "UserService",
+        "targetModuleName": "AppModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-2044491288"
+    },
+    "-1319262116": {
+      "source": "-1899170862",
+      "target": "1725362405",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "RequestResetEmailUseCase",
+        "targetClassName": "CodeService",
+        "sourceClassToken": "RequestResetEmailUseCase",
+        "targetClassToken": "CodeService",
+        "targetModuleName": "AppModule",
+        "keyOrIndex": 1,
+        "injectionType": "constructor"
+      },
+      "id": "-1319262116"
+    },
+    "-1185215391": {
+      "source": "-1899170862",
+      "target": "-368184753",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AppModule",
+        "sourceClassName": "RequestResetEmailUseCase",
+        "targetClassName": "GenerateCodeUtil",
+        "sourceClassToken": "RequestResetEmailUseCase",
+        "targetClassToken": "GenerateCode",
+        "targetModuleName": "CoreModule",
+        "keyOrIndex": 3,
+        "injectionType": "constructor"
+      },
+      "id": "-1185215391"
+    },
+    "-1499717512": {
+      "source": "-19112576",
+      "target": "-68926109",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "RepositoryModule"
+      },
+      "id": "-1499717512"
+    },
+    "-1976834476": {
+      "source": "-19112576",
+      "target": "-252494591",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "ProvidersModule"
+      },
+      "id": "-1976834476"
+    },
+    "-844262897": {
+      "source": "-19112576",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "-844262897"
+    },
+    "-815553404": {
+      "source": "-19112576",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-815553404"
+    },
+    "-450164520": {
+      "source": "-19112576",
+      "target": "541828540",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "MailerCoreModule"
+      },
+      "id": "-450164520"
+    },
+    "-237179246": {
+      "source": "-1125887048",
+      "target": "2102434273",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "CoreModule",
+        "targetModuleName": "HttpModule"
+      },
+      "id": "-237179246"
+    },
+    "-1202138089": {
+      "source": "-1125887048",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "CoreModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "-1202138089"
+    },
+    "-1731415306": {
+      "source": "-1125887048",
+      "target": "-536515674",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "CoreModule",
+        "targetModuleName": "JwtModule"
+      },
+      "id": "-1731415306"
+    },
+    "-84397388": {
+      "source": "-1125887048",
+      "target": "-384922179",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "CoreModule",
+        "targetModuleName": "MailerModule"
+      },
+      "id": "-84397388"
+    },
+    "-528424051": {
+      "source": "-1125887048",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "CoreModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "-528424051"
+    },
+    "-1545465186": {
+      "source": "-1125887048",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "CoreModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-1545465186"
+    },
+    "-11846792": {
+      "source": "-1125887048",
+      "target": "541828540",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "CoreModule",
+        "targetModuleName": "MailerCoreModule"
+      },
+      "id": "-11846792"
+    },
+    "-124416342": {
+      "source": "-1125887048",
+      "target": "-68926109",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "CoreModule",
+        "targetModuleName": "RepositoryModule"
+      },
+      "id": "-124416342"
+    },
+    "-1161479487": {
+      "source": "2102434273",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "HttpModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "-1161479487"
+    },
+    "-1307850520": {
+      "source": "2102434273",
+      "target": "-1125887048",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "HttpModule",
+        "targetModuleName": "CoreModule"
+      },
+      "id": "-1307850520"
+    },
+    "-1051526031": {
+      "source": "2102434273",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "HttpModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "-1051526031"
+    },
+    "-1577408814": {
+      "source": "2102434273",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "HttpModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-1577408814"
+    },
+    "-1980671995": {
+      "source": "2102434273",
+      "target": "-949539487",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "HttpModule",
+        "targetModuleName": "CacheModule"
+      },
+      "id": "-1980671995"
+    },
+    "-43790420": {
+      "source": "2102434273",
+      "target": "541828540",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "HttpModule",
+        "targetModuleName": "MailerCoreModule"
+      },
+      "id": "-43790420"
+    },
+    "-156359970": {
+      "source": "2102434273",
+      "target": "-68926109",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "HttpModule",
+        "targetModuleName": "RepositoryModule"
+      },
+      "id": "-156359970"
+    },
+    "-982423140": {
+      "source": "2102434273",
+      "target": "-252494591",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "HttpModule",
+        "targetModuleName": "ProvidersModule"
+      },
+      "id": "-982423140"
+    },
+    "-1503202939": {
+      "source": "1712628187",
+      "target": "-68926109",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigModule",
+        "targetModuleName": "RepositoryModule"
+      },
+      "id": "-1503202939"
+    },
+    "-1853047561": {
+      "source": "1712628187",
+      "target": "-252494591",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigModule",
+        "targetModuleName": "ProvidersModule"
+      },
+      "id": "-1853047561"
+    },
+    "-1995183955": {
+      "source": "211572259",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigHostModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "-1995183955"
+    },
+    "-60954175": {
+      "source": "211572259",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigHostModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "-60954175"
+    },
+    "-1995562322": {
+      "source": "-949539487",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "CacheModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "-1995562322"
+    },
+    "-431539039": {
+      "source": "-949539487",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "CacheModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-431539039"
+    },
+    "-1337511499": {
+      "source": "-949539487",
+      "target": "541828540",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "CacheModule",
+        "targetModuleName": "MailerCoreModule"
+      },
+      "id": "-1337511499"
+    },
+    "-1079268397": {
+      "source": "-1959092373",
+      "target": "-1125887048",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "PassportModule",
+        "targetModuleName": "CoreModule"
+      },
+      "id": "-1079268397"
+    },
+    "-947841774": {
+      "source": "-1959092373",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "PassportModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "-947841774"
+    },
+    "-1905114051": {
+      "source": "-1959092373",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "PassportModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-1905114051"
+    },
+    "-701661116": {
+      "source": "-1959092373",
+      "target": "-949539487",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "PassportModule",
+        "targetModuleName": "CacheModule"
+      },
+      "id": "-701661116"
+    },
+    "-1245496759": {
+      "source": "-1959092373",
+      "target": "-68926109",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "PassportModule",
+        "targetModuleName": "RepositoryModule"
+      },
+      "id": "-1245496759"
+    },
+    "-815995173": {
+      "source": "-1959092373",
+      "target": "-252494591",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "PassportModule",
+        "targetModuleName": "ProvidersModule"
+      },
+      "id": "-815995173"
+    },
+    "-2121949613": {
+      "source": "-536515674",
+      "target": "-949539487",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "JwtModule",
+        "targetModuleName": "CacheModule"
+      },
+      "id": "-2121949613"
+    },
+    "-319813732": {
+      "source": "-536515674",
+      "target": "-252494591",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "JwtModule",
+        "targetModuleName": "ProvidersModule"
+      },
+      "id": "-319813732"
+    },
+    "-1343023662": {
+      "source": "-384922179",
+      "target": "541828540",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MailerModule",
+        "targetModuleName": "MailerCoreModule"
+      },
+      "id": "-1343023662"
+    },
+    "-581430297": {
+      "source": "-384922179",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MailerModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "-581430297"
+    },
+    "-560415474": {
+      "source": "-384922179",
+      "target": "-1125887048",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MailerModule",
+        "targetModuleName": "CoreModule"
+      },
+      "id": "-560415474"
+    },
+    "-1585280045": {
+      "source": "-384922179",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MailerModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "-1585280045"
+    },
+    "-2119146056": {
+      "source": "-384922179",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MailerModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-2119146056"
+    },
+    "-443019037": {
+      "source": "-384922179",
+      "target": "-949539487",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MailerModule",
+        "targetModuleName": "CacheModule"
+      },
+      "id": "-443019037"
+    },
+    "-1463840326": {
+      "source": "-384922179",
+      "target": "-252494591",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MailerModule",
+        "targetModuleName": "ProvidersModule"
+      },
+      "id": "-1463840326"
+    },
+    "-195437038": {
+      "source": "541828540",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MailerCoreModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-195437038"
+    },
+    "-1584300837": {
+      "source": "541828540",
+      "target": "-949539487",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MailerCoreModule",
+        "targetModuleName": "CacheModule"
+      },
+      "id": "-1584300837"
+    },
+    "-1047744974": {
+      "source": "541828540",
+      "target": "-252494591",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MailerCoreModule",
+        "targetModuleName": "ProvidersModule"
+      },
+      "id": "-1047744974"
+    },
+    "-896396895": {
+      "source": "-68926109",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "RepositoryModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "-896396895"
+    },
+    "-14872115": {
+      "source": "-68926109",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "RepositoryModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "-14872115"
+    },
+    "-1036649303": {
+      "source": "-68926109",
+      "target": "-949539487",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "RepositoryModule",
+        "targetModuleName": "CacheModule"
+      },
+      "id": "-1036649303"
+    },
+    "-114256128": {
+      "source": "-68926109",
+      "target": "-252494591",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "RepositoryModule",
+        "targetModuleName": "ProvidersModule"
+      },
+      "id": "-114256128"
+    },
+    "-1159237705": {
+      "source": "-252494591",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ProvidersModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "-1159237705"
+    },
+    "-798890489": {
+      "source": "-252494591",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ProvidersModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "-798890489"
+    },
+    "-1967311362": {
+      "source": "-252494591",
+      "target": "541828540",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ProvidersModule",
+        "targetModuleName": "MailerCoreModule"
+      },
+      "id": "-1967311362"
+    }
+  },
+  "entrypoints": {},
+  "extras": {
+    "orphanedEnhancers": [],
+    "attachedEnhancers": []
+  },
+  "status": "partial",
+  "metadata": {
+    "cause": {
+      "type": "unknown",
+      "error": {
+        "errno": -4078,
+        "code": "ECONNREFUSED",
+        "syscall": "connect",
+        "address": "127.0.0.1",
+        "port": 6379
+      }
+    }
+  }
+}

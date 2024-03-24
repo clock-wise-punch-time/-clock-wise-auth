@@ -23,10 +23,7 @@ const { MAIL_NAME, MAIL_FROM, MAIL_HOST, MAIL_USER, MAIL_PASS, MAIL_PORT } =
 @Global()
 @Module({
   imports: [
-    HttpModule.register({
-      timeout: 5000,
-      maxRedirects: 5,
-    }),
+    HttpModule,
     ConfigModule.forRoot({
       isGlobal: true,
     }),
@@ -39,6 +36,7 @@ const { MAIL_NAME, MAIL_FROM, MAIL_HOST, MAIL_USER, MAIL_PASS, MAIL_PORT } =
             host: process.env.REDIS_HOST,
             port: Number(process.env.REDIS_PORT),
           },
+          password: process.env.REDIS_PASSWORD,
         }),
     }),
     PassportModule,

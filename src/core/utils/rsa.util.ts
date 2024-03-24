@@ -11,8 +11,8 @@ export class RSAUtil implements RSAInterface {
 
   constructor() {
     this.passphrase = process.env.PASSPHRASE;
-    this.publicKey = process.env.PUBLIC_KEY;
-    this.privateKey = process.env.PRIVATE_KEY;
+    this.publicKey = process.env.PUBLIC_KEY.split(String.raw`\n`).join('\n')
+    this.privateKey = process.env.PRIVATE_KEY.split(String.raw`\n`).join('\n')
   }
 
   encrypt(data: Record<string, unknown>): string {

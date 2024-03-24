@@ -49,6 +49,9 @@ async function bootstrap() {
   app.use(compression());
   app.use(
     helmet({
+      crossOriginOpenerPolicy: {
+        policy: "same-origin",
+      },
       contentSecurityPolicy: {
         directives: {
           ...helmet.contentSecurityPolicy.getDefaultDirectives(),
