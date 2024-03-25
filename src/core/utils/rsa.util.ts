@@ -11,11 +11,12 @@ export class RSAUtil implements RSAInterface {
 
   constructor() {
     this.passphrase = process.env.PASSPHRASE;
-    this.publicKey = process.env.PUBLIC_KEY.split(String.raw`\n`).join('\n')
-    this.privateKey = process.env.PRIVATE_KEY.split(String.raw`\n`).join('\n')
+    this.publicKey = process.env.PUBLIC_KEY.split(String.raw`\n`).join("\n");
+    this.privateKey = process.env.PRIVATE_KEY.split(String.raw`\n`).join("\n");
   }
 
   encrypt(data: Record<string, unknown>): string {
+    console.log(this.publicKey);
     const textJsonToString = JSON.stringify(data);
     const bufferData = Buffer.from(textJsonToString, "utf8");
     const encryptedData = crypto.publicEncrypt(this.publicKey, bufferData);
