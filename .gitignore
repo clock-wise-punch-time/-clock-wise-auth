@@ -58,7 +58,6 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 /security/keys/private_key.pem
 /security/keys/public_key.pem
 /kubernetes/config-map.yaml
-/deploy.sh
 /kubernetes/secrets.yml
 kubernetes/config-map.yaml
 /settings
